@@ -72,3 +72,14 @@ dl.dl-horizontal dd {
 .modal-header {
 	background-color: #ddd;
 }
+
+.outline {
+	margin-bottom: 0;
+	padding: 10px;
+	border: 1px dashed #ddd;
+	background-color: #f5f5f5;
+}
+
+.nav .fa {
+	width: 20px;
+}

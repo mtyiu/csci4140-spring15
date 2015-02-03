@@ -10,6 +10,15 @@
 			{
 				"title" : "Responsive Web Design with Bootstrap 3",
 				"note" : "Pages 3-12 includes the requirements of the layout of Assignment 2.",
+				"outline" : [
+					"Assignment 2 overview – Layout design",
+					"CSS (Cascading Style Sheets)",
+					"Font Awesome",
+					"Responsive web design (RWD)",
+					"CSS media queries",
+					"Bootstrap 3",
+					"Setting up the development environment for Node.js and Express"
+				],
 				"downloads" : [
 					{ "type" : "pdf", "name" : "Download Notes", "link" : "tutorials/5/bootstrap.pdf" },
 					{ "type" : "zip", "name" : "Example Code", "link" : "tutorials/5/example_code.zip" },
@@ -21,13 +30,17 @@
 			{
 				"title" : "Installing Node.js and Express on Windows",
 				"downloads" : [
-					{ "type" : "pdf", "name" : "Download Notes", "link" : "tutorials/5/install-nodejs-on-windows.pdf" }
+					{ "type" : "pdf", "name" : "Download Notes", "link" : "tutorials/5/install-nodejs-on-windows.pdf" },
+					{ "type" : "file", "name" : "hello.js", "link" : "tutorials/5/example_code/hello.js" },
+					{ "type" : "github", "name" : "hello.js", "link" : "https://github.com/mtyiu/csci4140-spring15/tree/gh-pages/tutorials/5/example_code/hello.js" }
 				]
 			},
 			{
 				"title" : "Installing Node.js and Express on Linux or Mac",
 				"downloads" : [
-					{ "type" : "pdf", "name" : "Download Notes", "link" : "tutorials/5/install-nodejs-on-linux-mac.pdf" }
+					{ "type" : "pdf", "name" : "Download Notes", "link" : "tutorials/5/install-nodejs-on-linux-mac.pdf" },
+					{ "type" : "file", "name" : "hello.js", "link" : "tutorials/5/example_code/hello.js" },
+					{ "type" : "github", "name" : "hello.js", "link" : "https://github.com/mtyiu/csci4140-spring15/tree/gh-pages/tutorials/5/example_code/hello.js" }
 				]
 			}
 		]
@@ -36,7 +49,7 @@
 		"week" : 7,
 		"date" : "26 February 2015",
 		"theme" : "Front-end Development",
-		"display" : true,
+		"display" : false,
 		"target" : "Students can start implementing the player and control logic of Assignment 2 (locally)",
 		"topics" : [
 			{
@@ -57,7 +70,7 @@
 		"week" : 8,
 		"date" : "5 March 2015",
 		"theme" : "Back-end Development",
-		"display" : true,
+		"display" : false,
 		"target" : "Students can start implementing the back-end of Assignment 2",
 		"topics" : [
 			{
@@ -66,10 +79,6 @@
 			},
 			{
 				"title" : "WebSocket and Socket.IO",
-				"downloads" : null
-			},
-			{
-				"title" : "Alternative: AJAX with Active Polling",
 				"downloads" : null
 			},
 			{
@@ -82,7 +91,7 @@
 		"week" : 9,
 		"date" : "12 March 2015",
 		"theme" : "Assignment 2 Hints",
-		"display" : true,
+		"display" : false,
 		"target" : "Students should complete Assignment 2 after this tutorial",
 		"topics" : [
 			{

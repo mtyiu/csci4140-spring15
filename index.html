@@ -43,16 +43,26 @@
 									</a>
 								</h4>
 							</div>
-							<div id="tut-{{ $index }}" class="panel-collapse collapse{{ tutorial.display ? ' in' : '' }}" role="tabpanel" aria-labelledby="tut-heading-{{ $index }}">
+							<div id="tut-{{ $index }}" class="panel-collapse collapse-tut collapse{{ tutorial.display ? ' in' : '' }}{{ tutorial.current ? ' current' : '' }}" role="tabpanel" aria-labelledby="tut-heading-{{ $index }}">
 								<div class="panel-body">
 									<div class="row" ng-repeat-start="topic in tutorial.topics">
 										<div class="col-sm-7">
 											<strong class="topic">{{ topic.title }}</strong>
+											<a data-toggle="collapse" href="#tut-{{ $index }}-outline" aria-expanded="false" aria-controls="tut-{{ $index }}-outline" ng-if="topic.outline !== undefined">
+												[Outline]
+											</a>
+											<div class="collapse collapse-outline" id="tut-{{ $index }}-outline" ng-if="topic.outline !== undefined">
+												<div class="outline">
+													<ul>
+														<li ng-repeat="o in topic.outline">{{ o }}</li>
+													</ul>
+												</div>
+											</div>
 											<p class="tags" ng-if="topic.tags.length > 0">
 												<strong>Tags:</strong>
 												<span ng-repeat="tag in topic.tags" class="badge tag">{{ tag }}</span>
 											</p>
-											<p class="note text-danger" ng-if="topic.note != undefined">
+											<p class="note text-danger" ng-if="topic.note !== undefined">
 												<strong>Note:</strong>
 												<span>{{ topic.note }}</span>
 											</p>
@@ -138,12 +148,33 @@
 						</div>
 					</div>
 					<ul class="nav nav-pills nav-stacked">
+						<li>
+							<a href="javascript:;" id="collapse-all">
+								<i class="fa fa-chevron-up"></i> Collapse All
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" id="expand-all">
+								<i class="fa fa-chevron-down"></i> Expand All
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" id="show-current-only">
+								<i class="fa fa-bookmark-o"></i> Show Current Only
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" id="show-all-outline">
+								<i class="fa fa-search"></i> Toggle All Outline
+							</a>
+						</li>
+						<li><div class="divider"></div></li>
 						<li ng-repeat="nav in navs" ng-switch="nav.type">
 							<a ng-switch-when="normal" href="{{ nav.href }}" target="_blank">
-								<i class="fa fa-{{ nav.icon }}"></i>&nbsp;&nbsp;{{ nav.name }}
+								<i class="fa fa-{{ nav.icon }}"></i> {{ nav.name }}
 							</a>
 							<a ng-switch-when="modal" data-toggle="modal" href="#{{ nav.href }}">
-								<i class="fa fa-{{ nav.icon }}"></i>&nbsp;&nbsp;{{ nav.name }}
+								<i class="fa fa-{{ nav.icon }}"></i> {{ nav.name }}
 							</a>
 						</li>
 					</ul>
@@ -208,5 +239,6 @@
 		</div><!-- /.modal -->
 
 		<script src="js/bootstrap.min.js"></script>
+		<script src="js/custom.js"></script>
 	</body>
 </html>
