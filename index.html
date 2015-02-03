@@ -33,13 +33,11 @@
 			<div class="row">
 				<main class="col-md-8 col-md-push-4">
 					<div class="panel-group" id="tutorials" role="tablist" aria-multiselectable="true">
-						<div class="panel panel-{{ tutorial.current ? 'success' : 'default' }}" ng-repeat="tutorial in tutorials">
+						<div class="panel panel-{{ tutorial.current ? 'primary' : 'default' }}" ng-repeat="tutorial in tutorials">
 							<div class="panel-heading" role="tab" id="#tut-heading-{{ $index }}">
 								<h4 class="panel-title">
 									<a data-toggle="collapse" href="#tut-{{ $index }}" aria-expanded="true" aria-controls="tut-{{ $index }}">
-										<span class="week">Week #{{ tutorial.week }}</span>
-										<span class="date">({{ tutorial.date }}):</span>
-										<span class="theme-title">{{ tutorial.theme }}</span>
+										<span class="week">Week #{{ tutorial.week }}</span><span class="date">({{ tutorial.date }}):</span><span class="theme-title">{{ tutorial.theme }}</span>
 									</a>
 								</h4>
 							</div>
@@ -59,10 +57,12 @@
 												</div>
 											</div>
 											<p class="tags" ng-if="topic.tags.length > 0">
+												<i class="fa fa-tags"></i>
 												<strong>Tags:</strong>
 												<span ng-repeat="tag in topic.tags" class="badge tag">{{ tag }}</span>
 											</p>
 											<p class="note text-danger" ng-if="topic.note !== undefined">
+												<i class="fa fa-bullhorn"></i>
 												<strong>Note:</strong>
 												<span>{{ topic.note }}</span>
 											</p>
@@ -74,19 +74,19 @@
 														<i class="fa fa-file-pdf-o"></i>&nbsp;&nbsp;
 														{{ d.name }} ({{ d.type }})
 													</button>
-													<button class="btn btn-block btn-sm btn-danger" ng-switch-when="zip" ng-click="download( d.link )">
+													<button class="btn btn-block btn-sm btn-default" ng-switch-when="zip" ng-click="download( d.link )">
 														<i class="fa fa-file-zip-o"></i>&nbsp;&nbsp;
 														{{ d.name }} ({{ d.type }})
 													</button>
-													<button class="btn btn-block btn-sm btn-danger" ng-switch-when="file" ng-click="download( d.link )">
+													<button class="btn btn-block btn-sm btn-default" ng-switch-when="file" ng-click="download( d.link )">
 														<i class="fa fa-file-o"></i>&nbsp;&nbsp;
 														{{ d.name }} ({{ d.type }})
 													</button>
-													<button class="btn btn-block btn-sm btn-warning" ng-switch-when="github" ng-click="download( d.link )">
+													<button class="btn btn-block btn-sm btn-default" ng-switch-when="github" ng-click="download( d.link )">
 														<i class="fa fa-github-square"></i>&nbsp;&nbsp;
 														{{ d.name }} ({{ d.type }})
 													</button>
-													<a href="{{ d.link }}" data-toggle="modal" class="btn btn-block btn-sm btn-success" ng-switch-when="demo">
+													<a href="{{ d.link }}" data-toggle="modal" class="btn btn-block btn-sm btn-default" ng-switch-when="demo">
 														<i class="fa fa-eye"></i>&nbsp;&nbsp;
 														{{ d.name }}
 													</a>
@@ -109,7 +109,27 @@
 				</main>
 				<aside role="navigation" class="col-md-4 col-md-pull-8">
 					<span class="visible-xs-inline visible-sm-inline"><br /></span>
-					<div class="panel panel-primary">
+					<div class="panel panel-danger">
+						<div class="panel-heading">
+							<a data-toggle="collapse" href="#news">
+								<h4 class="panel-title">
+									News
+									<div class="pull-right"><i class="fa fa-plus-square"></i></div>
+								</h4>
+							</a>
+						</div>
+						<div class="panel-collapse collapse in" id="news">
+							<div class="panel-body">
+								<ul>
+									<li ng-repeat="(date, item) in news" class="{{ $first ? 'text-danger' : 'text-muted' }}">
+										<strong>{{ date }}</strong>: 
+										{{ item }}
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="panel panel-default">
 						<div class="panel-heading">
 							<a data-toggle="collapse" href="#tutorial-info">
 								<h4 class="panel-title">
@@ -142,7 +162,7 @@
 									</tr>
 								</table>
 								<div class="text-center">
-									<a href="{{ metadata.feedback }}" target="_blank" class="btn btn-block btn-primary">Tutorial Feedback Form</a>
+									<a href="{{ metadata.feedback }}" target="_blank" class="btn btn-block btn-default">Tutorial Feedback Form</a>
 								</div>
 							</div>
 						</div>
@@ -222,7 +242,7 @@
 									</button>
 								</div>
 								<div class="col-sm-3">
-									<button class="btn btn-block btn-sm btn-danger" ng-click="download( page.source )">
+									<button class="btn btn-block btn-sm btn-default" ng-click="download( page.source )">
 										<i class="fa fa-file-o"></i>&nbsp;&nbsp;
 										View Source
 									</button>

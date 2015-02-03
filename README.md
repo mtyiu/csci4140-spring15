@@ -5,4 +5,4 @@ This github hosts the resource page, tutorial slides and example code for the tu
 
 This course is offered by Department of Computer Science and Engineering, The Chinese University of Hong Kong.
 
-Link: <http://mtyiu.github.com/>
+Link: <http://mtyiu.github.io/csci4140-spring15/>

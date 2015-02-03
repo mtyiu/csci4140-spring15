@@ -6,7 +6,7 @@ app.controller( 'defaultController', function ( $scope, $http ) {
 		ga( 'send', 'event', 'download', url );
 	};
 
-	var jsons = [ 'metadata', 'navs', 'modals', 'tutorials' ];
+	var jsons = [ 'news', 'metadata', 'navs', 'modals', 'tutorials' ];
 	for ( var i in jsons ) {
 		$http.get( 'json/' + jsons[ i ] + '.json' ).success( function() {
 			var key = jsons[ i ];

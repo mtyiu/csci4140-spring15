@@ -65,13 +65,13 @@
 				"category" : "Bootstrap",
 				"title" : "ERGWAVE Login Portal (Original)",
 				"link" : "tutorials/5/example_code/ergwave/login.html",
-				"source" : "https://github.com/mtyiu/csci4140-spring15/blob/gh-pages/tutorials/5/example_code/ergwave/login.html"
+				"source" : "https://github.com/mtyiu/csci4140-spring15/blob/gh-pages/tutorials/5/example_code/ergwave"
 			},
 			{
 				"category" : "Bootstrap",
 				"title" : "ERGWAVE Login Portal (Responsive)",
 				"link" : "tutorials/5/example_code/ergwave/login_responsive.html",
-				"source" : "https://github.com/mtyiu/csci4140-spring15/blob/gh-pages/tutorials/5/example_code/ergwave/login_responsive.html"
+				"source" : "https://github.com/mtyiu/csci4140-spring15/blob/gh-pages/tutorials/5/example_code/ergwave"
 			}
 		]
 	}

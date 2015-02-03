@@ -43,14 +43,13 @@ dl.dl-horizontal dd {
 	font-style: italic;
 }
 
-.panel-primary a .panel-title {
-	color: #fff;
-	font-weight: bold;
+.panel-default a .panel-title {
+	color: #222;
 }
 
-.panel-primary a:hover .panel-title,
+.panel-default a:hover .panel-title,
 .panel-primary a:focus .panel-title {
-  color: #fff;
+  color: #000;
   text-decoration: underline;
 }
 
@@ -82,4 +81,8 @@ dl.dl-horizontal dd {
 
 .nav .fa {
 	width: 20px;
+}
+
+.btn-default {
+	background-image: radial-gradient(circle, #f8f8f8 80%, #ddd 81%);
 }
