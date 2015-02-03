@@ -2,9 +2,77 @@
 	{
 		"id" : "about",
 		"title" : "About this Page",
+		"type" : "normal",
 		"contents" : [
-			"This page is dedicated for hosting the tutorial notes and example code of the tutorials conducted by Natt YIU Man Tung.",
+			"This page is dedicated for hosting the tutorial notes and example code of the tutorials conducted by Matt YIU Man Tung.",
 			"This page is built by AngularJS, jQuery and Bootstrap."
+		]
+	},
+	{
+		"id" : "tut5-demo",
+		"title" : "Responsive Web Design with Bootstrap 3",
+		"type" : "demo",
+		"contents" : [
+			{
+				"category" : "CSS",
+				"title" : "H1 (Original)",
+				"link" : "tutorials/5/example_code/css/h1.html",
+				"source" : "https://github.com/mtyiu/csci4140-spring15/blob/gh-pages/tutorials/5/example_code/css/h1.html"
+			},
+			{
+				"category" : "CSS",
+				"title" : "H1 (With CSS)",
+				"link" : "tutorials/5/example_code/css/h1-css.html",
+				"source" : "https://github.com/mtyiu/csci4140-spring15/blob/gh-pages/tutorials/5/example_code/css/h1-css.html"
+			},
+			{
+				"category" : "Font Awesome",
+				"title" : "Example",
+				"link" : "tutorials/5/example_code/css/fa.html",
+				"source" : "https://github.com/mtyiu/csci4140-spring15/blob/gh-pages/tutorials/5/example_code/css/fa.html"
+			},
+			{
+				"category" : "CSS Media Queries",
+				"title" : "Sidebar",
+				"link" : "tutorials/5/example_code/media-query/sidebar.html",
+				"source" : "https://github.com/mtyiu/csci4140-spring15/blob/gh-pages/tutorials/5/example_code/media-query/"
+			},
+			{
+				"category" : "CSS Media Queries",
+				"title" : "Changing background color",
+				"link" : "tutorials/5/example_code/media-query/demo.html",
+				"source" : "https://github.com/mtyiu/csci4140-spring15/blob/gh-pages/tutorials/5/example_code/media-query/"
+			},
+			{
+				"category" : "Bootstrap",
+				"title" : "container VS. container-fluid",
+				"link" : "tutorials/5/example_code/bootstrap/container.html",
+				"source" : "https://github.com/mtyiu/csci4140-spring15/blob/gh-pages/tutorials/5/example_code/bootstrap/container.html"
+			},
+			{
+				"category" : "Bootstrap",
+				"title" : "Grid system (Basic)",
+				"link" : "tutorials/5/example_code/bootstrap/grid.html",
+				"source" : "https://github.com/mtyiu/csci4140-spring15/blob/gh-pages/tutorials/5/example_code/bootstrap/grid.html"
+			},
+			{
+				"category" : "Bootstrap",
+				"title" : "Grid system (Advanced)",
+				"link" : "tutorials/5/example_code/bootstrap/grid-misc.html",
+				"source" : "https://github.com/mtyiu/csci4140-spring15/blob/gh-pages/tutorials/5/example_code/bootstrap/grid-misc.html"
+			},
+			{
+				"category" : "Bootstrap",
+				"title" : "ERGWAVE Login Portal (Original)",
+				"link" : "tutorials/5/example_code/ergwave/login.html",
+				"source" : "https://github.com/mtyiu/csci4140-spring15/blob/gh-pages/tutorials/5/example_code/ergwave/login.html"
+			},
+			{
+				"category" : "Bootstrap",
+				"title" : "ERGWAVE Login Portal (Responsive)",
+				"link" : "tutorials/5/example_code/ergwave/login_responsive.html",
+				"source" : "https://github.com/mtyiu/csci4140-spring15/blob/gh-pages/tutorials/5/example_code/ergwave/login_responsive.html"
+			}
 		]
 	}
 ]

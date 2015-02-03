@@ -63,3 +63,12 @@ dl.dl-horizontal dd {
 	margin-bottom: 8px;
 	border-top: 1px dashed #ccc;
 }
+
+.divider-demo {
+	margin-top: 6px;
+	margin-bottom: 6px;
+}
+
+.modal-header {
+	background-color: #ddd;
+}

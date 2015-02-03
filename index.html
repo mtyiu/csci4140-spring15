@@ -52,6 +52,10 @@
 												<strong>Tags:</strong>
 												<span ng-repeat="tag in topic.tags" class="badge tag">{{ tag }}</span>
 											</p>
+											<p class="note text-danger" ng-if="topic.note != undefined">
+												<strong>Note:</strong>
+												<span>{{ topic.note }}</span>
+											</p>
 										</div>
 										<div class="col-sm-5">
 											<div ng-show="topic.downloads !== null">
@@ -64,14 +68,18 @@
 														<i class="fa fa-file-zip-o"></i>&nbsp;&nbsp;
 														{{ d.name }} ({{ d.type }})
 													</button>
+													<button class="btn btn-block btn-sm btn-danger" ng-switch-when="file" ng-click="download( d.link )">
+														<i class="fa fa-file-o"></i>&nbsp;&nbsp;
+														{{ d.name }} ({{ d.type }})
+													</button>
 													<button class="btn btn-block btn-sm btn-warning" ng-switch-when="github" ng-click="download( d.link )">
 														<i class="fa fa-github-square"></i>&nbsp;&nbsp;
 														{{ d.name }} ({{ d.type }})
 													</button>
-													<button class="btn btn-block btn-sm btn-success" ng-switch-when="demo" ng-click="download( d.link )">
+													<a href="{{ d.link }}" data-toggle="modal" class="btn btn-block btn-sm btn-success" ng-switch-when="demo">
 														<i class="fa fa-eye"></i>&nbsp;&nbsp;
 														{{ d.name }}
-													</button>
+													</a>
 												</div>
 											</div>
 											<div class="text-muted text-center" ng-show="topic.downloads === null">
@@ -79,7 +87,7 @@
 											</div>
 										</div>
 									</div>
-									<div ng-repeat-end class="divider" ng-if="! $last"></div>
+									<div ng-repeat-end class="divider"></div>
 									<p class="target">
 										<i class="fa fa-check-circle"></i>
 										{{ tutorial.target }}
@@ -168,7 +176,29 @@
 						<h4 class="modal-title">{{ modal.title }}</h4>
 					</div>
 					<div class="modal-body">
-						<p ng-repeat="line in modal.contents">{{ line }}</p>
+						<p ng-if="modal.type == 'normal'" ng-repeat="line in modal.contents">{{ line }}</p>
+						<div ng-if="modal.type == 'demo'">
+							<h5>Demo Pages</h5>
+							<div class="row" ng-repeat-start="page in modal.contents">
+								<div class="col-sm-6">
+									<strong>{{ page.category }}:</strong>
+									{{ page.title }}
+								</div>
+								<div class="col-sm-3">
+									<button class="btn btn-block btn-sm btn-primary" ng-click="download( page.link )">
+										<i class="fa fa-eye"></i>&nbsp;&nbsp;
+										View Page
+									</button>
+								</div>
+								<div class="col-sm-3">
+									<button class="btn btn-block btn-sm btn-danger" ng-click="download( page.source )">
+										<i class="fa fa-file-o"></i>&nbsp;&nbsp;
+										View Source
+									</button>
+								</div>
+							</div>
+							<div ng-repeat-end class="divider-demo" ng-if="! $last"></div>
+						</div>
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>

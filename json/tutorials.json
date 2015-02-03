@@ -9,11 +9,12 @@
 		"topics" : [
 			{
 				"title" : "Responsive Web Design with Bootstrap 3",
+				"note" : "Pages 3-12 includes the requirements of the layout of Assignment 2.",
 				"downloads" : [
 					{ "type" : "pdf", "name" : "Download Notes", "link" : "tutorials/5/bootstrap.pdf" },
 					{ "type" : "zip", "name" : "Example Code", "link" : "tutorials/5/example_code.zip" },
-					{ "type" : "github", "name" : "Example Code", "link" : "tutorials/5/example_code.zip" },
-					{ "type" : "demo", "name" : "Demo Pages", "link" : "#" }
+					{ "type" : "github", "name" : "Example Code", "link" : "https://github.com/mtyiu/csci4140-spring15/tree/gh-pages/tutorials/5/example_code" },
+					{ "type" : "demo", "name" : "Demo Pages", "link" : "#tut5-demo" }
 				],
 				"tags" : [ "layout", "css", "font awesome", "responsive web design", "media queries", "bootstrap" ]
 			},
