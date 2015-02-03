@@ -1,0 +1,110 @@
+[
+	{
+		"week" : 6,
+		"date" : "12 February 2015",
+		"theme" : "UI Design",
+		"current" : true,
+		"display" : true,
+		"target" : "Students can start implementing the UI of Assignment 2",
+		"topics" : [
+			{
+				"title" : "Responsive Web Design with Bootstrap 3",
+				"downloads" : [
+					{ "type" : "pdf", "name" : "Download Notes", "link" : "tutorials/5/bootstrap.pdf" },
+					{ "type" : "zip", "name" : "Example Code", "link" : "tutorials/5/example_code.zip" },
+					{ "type" : "github", "name" : "Example Code", "link" : "tutorials/5/example_code.zip" },
+					{ "type" : "demo", "name" : "Demo Pages", "link" : "#" }
+				],
+				"tags" : [ "layout", "css", "font awesome", "responsive web design", "media queries", "bootstrap" ]
+			},
+			{
+				"title" : "Installing Node.js and Express on Windows",
+				"downloads" : [
+					{ "type" : "pdf", "name" : "Download Notes", "link" : "tutorials/5/install-nodejs-on-windows.pdf" }
+				]
+			},
+			{
+				"title" : "Installing Node.js and Express on Linux or Mac",
+				"downloads" : [
+					{ "type" : "pdf", "name" : "Download Notes", "link" : "tutorials/5/install-nodejs-on-linux-mac.pdf" }
+				]
+			}
+		]
+	},
+	{
+		"week" : 7,
+		"date" : "26 February 2015",
+		"theme" : "Front-end Development",
+		"display" : true,
+		"target" : "Students can start implementing the player and control logic of Assignment 2 (locally)",
+		"topics" : [
+			{
+				"title" : "Assignment 2 Overview",
+				"downloads" : null
+			},
+			{
+				"title" : "YouTube IFrame API",
+				"downloads" : null
+			},
+			{
+				"title" : "Hints on Front-end Development",
+				"downloads" : null
+			}
+		]
+	},
+	{
+		"week" : 8,
+		"date" : "5 March 2015",
+		"theme" : "Back-end Development",
+		"display" : true,
+		"target" : "Students can start implementing the back-end of Assignment 2",
+		"topics" : [
+			{
+				"title" : "Node.js",
+				"downloads" : null
+			},
+			{
+				"title" : "WebSocket and Socket.IO",
+				"downloads" : null
+			},
+			{
+				"title" : "Alternative: AJAX with Active Polling",
+				"downloads" : null
+			},
+			{
+				"title" : "Deploying Node.js Applications on OpenShift",
+				"downloads" : null
+			}
+		]
+	},
+	{
+		"week" : 9,
+		"date" : "12 March 2015",
+		"theme" : "Assignment 2 Hints",
+		"display" : true,
+		"target" : "Students should complete Assignment 2 after this tutorial",
+		"topics" : [
+			{
+				"title" : "Assignment 2 Hints",
+				"downloads" : null
+			},
+			{
+				"title" : "Bonus Features",
+				"downloads" : null
+			}
+		]
+	},
+	{
+		"week" : "?",
+		"date" : "TBD",
+		"theme" : "Bonus materials",
+		"display" : false,
+		"target" : "The matrials are optional and may be useful for your projects :-)",
+		"topics" : [
+			{
+				"title" : "Symfony: PHP framework for web projects",
+				"downloads" : null
+			}
+		]
+	}
+]
