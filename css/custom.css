@@ -32,8 +32,13 @@ dl.dl-horizontal dd {
 }
 
 .tags {
-	padding-top: 10px;
+	padding-top: 5px;
 	color: #999;
+}
+
+.recommendation {
+	padding-top: 15px;
+	color: #2196f3;
 }
 
 .tag {

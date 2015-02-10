@@ -25,7 +25,8 @@
 					{ "type" : "github", "name" : "Example Code", "link" : "https://github.com/mtyiu/csci4140-spring15/tree/gh-pages/tutorials/5/example_code" },
 					{ "type" : "demo", "name" : "Demo Pages", "link" : "#tut5-demo" }
 				],
-				"tags" : [ "layout", "css", "font awesome", "responsive web design", "media queries", "bootstrap" ]
+				"tags" : [ "layout", "css", "font awesome", "responsive web design", "media queries", "bootstrap" ],
+				"recommendation" : { "CSS Diner" : "http://flukeout.github.io/" }
 			},
 			{
 				"title" : "Installing Node.js and Express on Windows",
