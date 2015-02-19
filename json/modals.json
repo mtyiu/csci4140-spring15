@@ -74,5 +74,24 @@
 				"source" : "https://github.com/mtyiu/csci4140-spring15/blob/gh-pages/tutorials/5/example_code/ergwave"
 			}
 		]
+	},
+	{
+		"id" : "tut6-screenshot",
+		"title" : "Screenshot of Assignment 2",
+		"type" : "download",
+		"contents" : [
+			{
+				"title" : "Desktop View",
+				"link" : "tutorials/6/downloads/asgn2-desktop.png"
+			},
+			{
+				"title" : "Tablet View",
+				"link" : "tutorials/6/downloads/asgn2-tablet.png"
+			},
+			{
+				"title" : "Phone View",
+				"link" : "tutorials/6/downloads/asgn2-phone.png"
+			}
+		]
 	}
 ]

@@ -99,6 +99,10 @@
 														<i class="fa fa-eye"></i>&nbsp;&nbsp;
 														{{ d.name }}
 													</a>
+													<a href="{{ d.link }}" data-toggle="modal" class="btn btn-block btn-sm btn-default" ng-switch-when="download">
+														<i class="fa fa-download"></i>&nbsp;&nbsp;
+														{{ d.name }}
+													</a>
 												</div>
 											</div>
 											<div class="text-muted text-center" ng-show="topic.downloads === null">
@@ -254,6 +258,20 @@
 									<button class="btn btn-block btn-sm btn-default" ng-click="download( page.source )">
 										<i class="fa fa-file-o"></i>&nbsp;&nbsp;
 										View Source
+									</button>
+								</div>
+							</div>
+							<div ng-repeat-end class="divider-demo" ng-if="! $last"></div>
+						</div>
+						<div ng-if="modal.type == 'download'">
+							<div class="row" ng-repeat-start="item in modal.contents">
+								<div class="col-sm-8">
+									{{ item.title }}
+								</div>
+								<div class="col-sm-4">
+									<button class="btn btn-block btn-sm btn-primary" ng-click="download( item.link )">
+										<i class="fa fa-download"></i>&nbsp;&nbsp;
+										Download
 									</button>
 								</div>
 							</div>
