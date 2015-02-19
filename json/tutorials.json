@@ -8,7 +8,7 @@
 		"topics" : [
 			{
 				"title" : "Responsive Web Design with Bootstrap 3",
-				"note" : "Pages 3-12 includes the requirements of the layout of Assignment 2.",
+				"note" : "<del>Pages 3-12 includes the requirements of the layout of Assignment 2.</del> Please refer to the tutorial notes of Week #7 for the requirements of the layout of Assignment 2.",
 				"outline" : [
 					"Assignment 2 overview – Layout design",
 					"CSS (Cascading Style Sheets)",
@@ -54,20 +54,37 @@
 		"target" : "Students can start implementing the player and control logic of Assignment 2 (locally)",
 		"topics" : [
 			{
-				"title" : "Assignment 2 Overview",
-				"downloads" : null
+				"title" : "Assignment 2 Overview & Hints on Front-end Development",
+				"note" : "This set of slides has not yet been finalized and is subject to change.",
+				"outline" : [
+					"Work flow",
+					"Client side: Layout design, QR code display, Playlist management & YouTube player control",
+					"Server side: Routing, Message forwarding, Retrieving video title"
+				],
+				"downloads" : [
+					{ "type" : "pdf", "name" : "Download Notes", "link" : "tutorials/6/asgn2-overview.pdf" },
+					{ "type" : "zip", "name" : "Example Code", "link" : "tutorials/6/example_code.zip" },
+					{ "type" : "github", "name" : "Example Code", "link" : "https://github.com/mtyiu/csci4140-spring15/tree/gh-pages/tutorials/6/example_code/qr_code" },
+					{ "type" : "html", "name" : "Demo Page", "link" : "tutorials/6/example_code/qr_code/qr_code.html" }
+				],
+				"tags" : [ "QR code", "DOM scripting", "localStorage", "HTML5", "client", "server" ]
 			},
 			{
 				"title" : "YouTube IFrame Player API",
+				"outline" : [
+					"Overview",
+					"Requirements",
+					"Getting started",
+					"Operations: Play, Pause, Stop, Mute, Unmute, Fast Forward, Rewind, Next Video, Previous Video",
+					"The onStateChange event",
+					"Destroying the player",
+					"Reference"
+				],
 				"downloads" : [
 					{ "type" : "pdf", "name" : "Download Notes", "link" : "tutorials/6/youtube-iframe-api.pdf" },
-					{ "type" : "zip", "name" : "Example Code", "link" : "tutorials/6/example_code/youtube-iframe-api.zip" },
-					{ "type" : "github", "name" : "Example Code", "link" : "https://github.com/mtyiu/csci4140-spring15/tree/gh-pages/tutorials/6/example_code/youtube-iframe-api" }
+					{ "type" : "github", "name" : "Example Code", "link" : "https://github.com/mtyiu/csci4140-spring15/tree/gh-pages/tutorials/6/example_code/youtube-iframe-api" },
+					{ "type" : "html", "name" : "Demo Page", "link" : "tutorials/6/example_code/youtube-iframe-api/index.html" }
 				]
-			},
-			{
-				"title" : "Hints on Front-end Development",
-				"downloads" : null
 			}
 		]
 	},

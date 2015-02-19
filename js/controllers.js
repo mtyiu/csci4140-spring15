@@ -16,3 +16,9 @@ app.controller( 'defaultController', function ( $scope, $http ) {
 		}() );
 	}
 });
+
+app.filter( 'raw', [ '$sce', function( $sce ){
+	return function( val ) {
+		return $sce.trustAsHtml( val );
+  };
+} ] );

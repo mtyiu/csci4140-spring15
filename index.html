@@ -34,22 +34,22 @@
 				<main class="col-md-8 col-md-push-4">
 					<div class="panel-group" id="tutorials" role="tablist" aria-multiselectable="true">
 						<div class="panel panel-{{ tutorial.current ? 'primary' : 'default' }}" ng-repeat="tutorial in tutorials">
-							<div class="panel-heading" role="tab" id="#tut-heading-{{ $index }}">
+							<div class="panel-heading" role="tab" id="#tut-heading-{{ tutorial.week }}">
 								<h4 class="panel-title">
-									<a data-toggle="collapse" href="#tut-{{ $index }}" aria-expanded="true" aria-controls="tut-{{ $index }}">
+									<a data-toggle="collapse" href="#tut-{{ tutorial.week == '?' ? 'X' : tutorial.week }}" aria-expanded="true" aria-controls="tut-{{ tutorial.week == '?' ? 'X' : tutorial.week }}">
 										<span class="week">Week #{{ tutorial.week }}</span><span class="date">({{ tutorial.date }}):</span><span class="theme-title">{{ tutorial.theme }}</span>
 									</a>
 								</h4>
 							</div>
-							<div id="tut-{{ $index }}" class="panel-collapse collapse-tut collapse{{ tutorial.display ? ' in' : '' }}{{ tutorial.current ? ' current' : '' }}" role="tabpanel" aria-labelledby="tut-heading-{{ $index }}">
+							<div id="tut-{{ tutorial.week == '?' ? 'X' : tutorial.week }}" class="panel-collapse collapse-tut collapse{{ tutorial.display ? ' in' : '' }}{{ tutorial.current ? ' current' : '' }}" role="tabpanel" aria-labelledby="tut-heading-{{ tutorial.week }}">
 								<div class="panel-body">
 									<div class="row" ng-repeat-start="topic in tutorial.topics">
 										<div class="col-sm-7">
 											<strong class="topic">{{ topic.title }}</strong>
-											<a data-toggle="collapse" href="#tut-{{ $index }}-outline" aria-expanded="false" aria-controls="tut-{{ $index }}-outline" ng-if="topic.outline !== undefined">
+											<a data-toggle="collapse" href="#tut-{{ tutorial.week }}-outline-{{ $index }}" aria-expanded="false" aria-controls="tut-{{ tutorial.week }}-outline-{{ $index }}" ng-if="topic.outline !== undefined">
 												[Outline]
 											</a>
-											<div class="collapse collapse-outline" id="tut-{{ $index }}-outline" ng-if="topic.outline !== undefined">
+											<div class="collapse collapse-outline" id="tut-{{ tutorial.week }}-outline-{{ $index }}" ng-if="topic.outline !== undefined">
 												<div class="outline">
 													<ul>
 														<li ng-repeat="o in topic.outline">{{ o }}</li>
@@ -69,7 +69,7 @@
 											<p class="note text-danger" ng-if="topic.note !== undefined">
 												<i class="fa fa-bullhorn"></i>
 												<strong>Note:</strong>
-												<span>{{ topic.note }}</span>
+												<span ng-bind-html="topic.note | raw"></span>
 											</p>
 										</div>
 										<div class="col-sm-5">
@@ -90,6 +90,10 @@
 													<button class="btn btn-block btn-sm btn-default" ng-switch-when="github" ng-click="download( d.link )">
 														<i class="fa fa-github-square"></i>&nbsp;&nbsp;
 														{{ d.name }} ({{ d.type }})
+													</button>
+													<button class="btn btn-block btn-sm btn-default" ng-switch-when="html" ng-click="download( d.link )">
+														<i class="fa fa-eye"></i>&nbsp;&nbsp;
+														{{ d.name }}
 													</button>
 													<a href="{{ d.link }}" data-toggle="modal" class="btn btn-block btn-sm btn-default" ng-switch-when="demo">
 														<i class="fa fa-eye"></i>&nbsp;&nbsp;
