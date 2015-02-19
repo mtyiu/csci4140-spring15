@@ -126,9 +126,9 @@
 						<div class="panel-collapse collapse in" id="news">
 							<div class="panel-body">
 								<ul>
-									<li ng-repeat="(date, item) in news" class="{{ $first ? 'text-danger' : 'text-muted' }}">
-										<strong>{{ date }}</strong>: 
-										{{ item }}
+									<li ng-repeat="item in news" class="{{ $first ? 'text-danger' : 'text-muted' }}">
+										<strong>{{ item.date }}</strong>: 
+										{{ item.content }}
 									</li>
 								</ul>
 							</div>

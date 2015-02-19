@@ -3,8 +3,7 @@
 		"week" : 6,
 		"date" : "12 February 2015",
 		"theme" : "UI Design",
-		"current" : true,
-		"display" : true,
+		"display" : false,
 		"target" : "Students can start implementing the UI of Assignment 2",
 		"topics" : [
 			{
@@ -50,7 +49,8 @@
 		"week" : 7,
 		"date" : "26 February 2015",
 		"theme" : "Front-end Development",
-		"display" : false,
+		"current" : true,
+		"display" : true,
 		"target" : "Students can start implementing the player and control logic of Assignment 2 (locally)",
 		"topics" : [
 			{
@@ -58,8 +58,12 @@
 				"downloads" : null
 			},
 			{
-				"title" : "YouTube IFrame API",
-				"downloads" : null
+				"title" : "YouTube IFrame Player API",
+				"downloads" : [
+					{ "type" : "pdf", "name" : "Download Notes", "link" : "tutorials/6/youtube-iframe-api.pdf" },
+					{ "type" : "zip", "name" : "Example Code", "link" : "tutorials/6/example_code/youtube-iframe-api.zip" },
+					{ "type" : "github", "name" : "Example Code", "link" : "https://github.com/mtyiu/csci4140-spring15/tree/gh-pages/tutorials/6/example_code/youtube-iframe-api" }
+				]
 			},
 			{
 				"title" : "Hints on Front-end Development",
