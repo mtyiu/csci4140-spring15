@@ -37,6 +37,7 @@
 			},
 			{
 				"title" : "Installing Node.js and Express on Linux or Mac",
+				"note" : "[20 February] Page 21 updated.",
 				"downloads" : [
 					{ "type" : "pdf", "name" : "Download Notes", "link" : "tutorials/5/install-nodejs-on-linux-mac.pdf" },
 					{ "type" : "file", "name" : "hello.js", "link" : "tutorials/5/example_code/hello.js" },
