@@ -1,6 +1,7 @@
 [
-	{ "date" : "Feb 20", "content" : "Fixed typo in \"Installing Node.js and Express on Linux or Mac\" (Week #6)." },
-	{ "date" : "Feb 19", "content" : "Uploaded tutorial notes for Week #7." },
+	{ "date" : "Feb 20", "content" : "Uploaded tutorial notes for Week #8: Deploying Node.js Applications on OpenShift.", "highlight" : true },
+	{ "date" : "Feb 20", "content" : "Fixed typo in \"Installing Node.js and Express on Linux or Mac\" (Week #6).", "highlight" : true },
+	{ "date" : "Feb 19", "content" : "Uploaded tutorial notes for Week #7.", "highlight" : true },
 	{ "date" : "Feb 10", "content" : "Added this week's recommendation." },
 	{ "date" : "Feb 4", "content" : "Uploaded tutorial notes for Week #6." },
 	{ "date" : "Jan 29", "content" : "Created page." }

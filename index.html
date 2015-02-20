@@ -8,6 +8,7 @@
 		<link href="css/font-awesome.min.css" rel="stylesheet">
 		<link href="css/loading-bar.min.css" rel="stylesheet">
 		<link href="css/custom.css" rel="stylesheet">
+		<link href="favicon.png" rel="icon" type="image/png" />
 		<!--[if lt IE 9]>
 			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -137,7 +138,7 @@
 						<div class="panel-collapse collapse in" id="news">
 							<div class="panel-body">
 								<ul>
-									<li ng-repeat="item in news" class="{{ $first ? 'text-danger' : 'text-muted' }}">
+									<li ng-repeat="item in news" class="{{ $first || item.highlight ? 'text-danger' : 'text-muted' }}">
 										<strong>{{ item.date }}</strong>: 
 										{{ item.content }}
 									</li>

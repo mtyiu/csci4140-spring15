@@ -106,7 +106,10 @@
 			},
 			{
 				"title" : "Deploying Node.js Applications on OpenShift",
-				"downloads" : null
+				"downloads" : [
+					{ "type" : "pdf", "name" : "Download Notes", "link" : "tutorials/7/deploy-nodejs-openshift.pdf" },
+					{ "type" : "github", "name" : "Example Code", "link" : "https://github.com/mtyiu/csci4140-spring15/tree/gh-pages/tutorials/7/example_code/openshift" }
+				]
 			}
 		]
 	},
