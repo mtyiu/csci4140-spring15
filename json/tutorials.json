@@ -116,7 +116,8 @@
 					"Learning the basics of Node.js: Non-blocking I/O, HTTP"
 				],
 				"downloads" : [
-					{ "type" : "pdf", "name" : "Download Notes", "link" : "tutorials/7/nodejs.pdf" },
+					{ "type" : "pdf", "name" : "Download Notes (wo/ Solution)", "link" : "tutorials/7/nodejs-wo-soln.pdf" },
+					{ "type" : "pdf", "name" : "Download Notes (w/ Solution)", "link" : "tutorials/7/nodejs.pdf" },
 					{ "type" : "zip", "name" : "Example Code", "link" : "tutorials/7/example_code.zip" },
 					{ "type" : "github", "name" : "Example Code", "link" : "https://github.com/mtyiu/csci4140-spring15/tree/gh-pages/tutorials/7/example_code/nodejs" }
 				],
@@ -137,7 +138,11 @@
 			},
 			{
 				"title" : "WebSocket and Socket.IO",
-				"downloads" : null,
+				"downloads" : [
+					{ "type" : "pdf", "name" : "Download Notes", "link" : "tutorials/8/websocket-socket-io.pdf" },
+					{ "type" : "zip", "name" : "Example Code", "link" : "tutorials/8/example_code/socket-io-chat.zip" },
+					{ "type" : "github", "name" : "Example Code", "link" : "https://github.com/mtyiu/csci4140-spring15/tree/gh-pages/tutorials/8/example_code/socket-io-chat" }
+				],
 				"recommendations" : [ 
 					{ "name" : "N-Mario", "href" : "https://cherrry.github.io/N-Mario" },
 					{ "name" : "GitHub (Client Side)", "href" : "https://github.com/cuhk-csci4140/N-Mario" },
