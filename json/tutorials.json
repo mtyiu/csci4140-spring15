@@ -118,7 +118,7 @@
 				"downloads" : [
 					{ "type" : "pdf", "name" : "Download Notes", "link" : "tutorials/7/nodejs.pdf" },
 					{ "type" : "zip", "name" : "Example Code", "link" : "tutorials/7/example_code.zip" },
-					{ "type" : "github", "name" : "Example Code", "link" : "https://github.com/mtyiu/csci4140-spring15/tree/gh-pages/tutorials/7/example_code" }
+					{ "type" : "github", "name" : "Example Code", "link" : "https://github.com/mtyiu/csci4140-spring15/tree/gh-pages/tutorials/7/example_code/nodejs" }
 				],
 				"recommendation" : { "nodeschool.io" : "http://nodeschool.io/" }
 			}
