@@ -67,7 +67,8 @@
 					{ "type" : "html", "name" : "Demo Page", "link" : "tutorials/6/example_code/qr_code/qr_code.html" },
 					{ "type" : "download", "name" : "Screenshot", "link" : "#tut6-screenshot" }
 				],
-				"tags" : [ "QR code", "DOM scripting", "localStorage", "HTML5", "client" ]
+				"tags" : [ "QR code", "DOM scripting", "localStorage", "HTML5", "client" ],
+				"recommendation" : { "A Hilarious Collection of CSS Puns & Jokes" : "http://9gag.com/gag/azEj9jK" }
 			},
 			{
 				"title" : "YouTube IFrame Player API",
@@ -108,15 +109,18 @@
 				"tags" : [ "server", "work flow", "routing", "message forwarding" ]
 			},
 			{
-				"title" : "Node.js and Express Web Framework",
-				"downloads" : null
-			},
-			{
-				"title" : "Deploying Node.js Applications on OpenShift",
+				"title" : "Learning the Basics of Node.js",
+				"note" : "This set of slides has not yet been finalized and is subject to change.",
+				"outline" : [
+					"What is Node.js?",
+					"Learning the basics of Node.js: Non-blocking I/O, HTTP"
+				],
 				"downloads" : [
-					{ "type" : "pdf", "name" : "Download Notes", "link" : "tutorials/7/deploy-nodejs-openshift.pdf" },
-					{ "type" : "github", "name" : "Example Code", "link" : "https://github.com/mtyiu/csci4140-spring15/tree/gh-pages/tutorials/7/example_code/openshift" }
-				]
+					{ "type" : "pdf", "name" : "Download Notes", "link" : "tutorials/7/nodejs.pdf" },
+					{ "type" : "zip", "name" : "Example Code", "link" : "tutorials/7/example_code.zip" },
+					{ "type" : "github", "name" : "Example Code", "link" : "https://github.com/mtyiu/csci4140-spring15/tree/gh-pages/tutorials/7/example_code" }
+				],
+				"recommendation" : { "nodeschool.io" : "http://nodeschool.io/" }
 			}
 		]
 	},
@@ -128,9 +132,35 @@
 		"target" : "Students should complete Assignment 2 after this tutorial",
 		"topics" : [
 			{
-				"title" : "WebSocket and Socket.IO",
+				"title" : "Express Web Framework",
 				"downloads" : null
 			},
+			{
+				"title" : "WebSocket and Socket.IO",
+				"downloads" : null,
+				"recommendations" : [ 
+					{ "name" : "N-Mario", "href" : "https://cherrry.github.io/N-Mario" },
+					{ "name" : "GitHub (Client Side)", "href" : "https://github.com/cuhk-csci4140/N-Mario" },
+					{ "name" : "GitHub (Server Side)", "href" : "https://github.com/cuhk-csci4140/Node-Mario" },
+					{ "name" : "Video", "href" : "https://www.youtube.com/watch?v=cPkCh6Z9aQ4" }
+				]
+			},
+			{
+				"title" : "Deploying Node.js Applications on OpenShift",
+				"downloads" : [
+					{ "type" : "pdf", "name" : "Download Notes", "link" : "tutorials/8/deploy-nodejs-openshift.pdf" },
+					{ "type" : "github", "name" : "Example Code", "link" : "https://github.com/mtyiu/csci4140-spring15/tree/gh-pages/tutorials/8/example_code/openshift" }
+				]
+			}
+		]
+	},
+	{
+		"week" : 10,
+		"date" : "19 March 2015",
+		"theme" : "More about Assignment 2 (Not confirmed)",
+		"display" : false,
+		"target" : "Students should already complete Assignment 2",
+		"topics" : [
 			{
 				"title" : "More about Assignment 2",
 				"downloads" : null

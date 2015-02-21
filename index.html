@@ -63,7 +63,12 @@
 											<p class="recommendation" ng-if="topic.recommendation !== undefined">
 												<i class="fa fa-thumbs-up"></i>
 												<strong>Recommendation:</strong>
-												<a href="{{ href }}" target="_blank" ng-repeat="(name, href) in topic.recommendation">{{ name }}</a>
+												<a href="{{ href }}" target="_blank" ng-repeat-start="(name, href) in topic.recommendation">{{ name }}</a><span ng-repeat-end ng-if="! $last">, </span>
+											</p>
+											<p class="recommendation" ng-if="topic.recommendations !== undefined">
+												<i class="fa fa-thumbs-up"></i>
+												<strong>Recommendation:</strong>
+												<a href="{{ r.href }}" target="_blank" ng-repeat-start="r in topic.recommendations">{{ r.name }}</a><span ng-repeat-end ng-if="! $last">, </span>
 											</p>
 											<p class="tags" ng-if="topic.tags.length > 0">
 												<i class="fa fa-tags"></i>
