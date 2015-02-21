@@ -110,7 +110,7 @@
 			},
 			{
 				"title" : "Learning the Basics of Node.js",
-				"note" : "This set of slides has not yet been finalized and is subject to change.",
+				"note" : "You are strongly encouraged to download the notes without solution and try the exercises before coming to the tutorial! (This set of slides has not yet been finalized and is subject to change.)",
 				"outline" : [
 					"What is Node.js?",
 					"Learning the basics of Node.js: Non-blocking I/O, HTTP"
@@ -138,6 +138,7 @@
 			},
 			{
 				"title" : "WebSocket and Socket.IO",
+				"note" : "This set of slides has not yet been finalized and is subject to change.",
 				"downloads" : [
 					{ "type" : "pdf", "name" : "Download Notes", "link" : "tutorials/8/websocket-socket-io.pdf" },
 					{ "type" : "zip", "name" : "Example Code", "link" : "tutorials/8/example_code/socket-io-chat.zip" },
