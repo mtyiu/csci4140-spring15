@@ -1,9 +1,9 @@
 {
-  "name": "Express Demo",
+  "name": "ExpressDemo",
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node server.js"
   },
   "dependencies": {
     "express": "~4.11.1"

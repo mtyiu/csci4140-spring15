@@ -135,14 +135,17 @@
 		"topics" : [
 			{
 				"title" : "Express Web Framework",
-				"downloads" : null
+				"downloads" : [
+					{ "type" : "pdf", "name" : "Download Notes", "link" : "tutorials/8/express.pdf" },
+					{ "type" : "zip", "name" : "Example Code", "link" : "tutorials/8/example_code.zip" },
+					{ "type" : "github", "name" : "Example Code", "link" : "https://github.com/mtyiu/csci4140-spring15/tree/gh-pages/tutorials/8/example_code/express" }
+				]
 			},
 			{
 				"title" : "WebSocket and Socket.IO",
-				"note" : "This set of slides has not yet been finalized and is subject to change.",
+				"note" : "[23 February] Updated example code and slides. (This set of slides has not yet been finalized and is subject to change.)",
 				"downloads" : [
 					{ "type" : "pdf", "name" : "Download Notes", "link" : "tutorials/8/websocket-socket-io.pdf" },
-					{ "type" : "zip", "name" : "Example Code", "link" : "tutorials/8/example_code/socket-io-chat.zip" },
 					{ "type" : "github", "name" : "Example Code", "link" : "https://github.com/mtyiu/csci4140-spring15/tree/gh-pages/tutorials/8/example_code/socket-io-chat" }
 				],
 				"recommendations" : [ 
@@ -154,6 +157,7 @@
 			},
 			{
 				"title" : "Deploying Node.js Applications on OpenShift",
+				"note" : "[23 February] Added .gitignore in example code and updated slides.",
 				"downloads" : [
 					{ "type" : "pdf", "name" : "Download Notes", "link" : "tutorials/8/deploy-nodejs-openshift.pdf" },
 					{ "type" : "github", "name" : "Example Code", "link" : "https://github.com/mtyiu/csci4140-spring15/tree/gh-pages/tutorials/8/example_code/openshift" }
@@ -164,13 +168,23 @@
 	{
 		"week" : 10,
 		"date" : "19 March 2015",
-		"theme" : "More about Assignment 2 (Not confirmed)",
+		"theme" : "More about Assignment 2",
 		"display" : false,
 		"target" : "Students should already complete Assignment 2",
 		"topics" : [
 			{
 				"title" : "More about Assignment 2",
 				"downloads" : null
+			},
+			{
+				"title" : "Remote debugging on Android or iOS devices",
+				"downloads" : null,
+				"outline" : [
+					"Why remote debugging?",
+					"Requirements",
+					"Remote debugging on Android",
+					"Remote debugging on iOS"
+				]
 			}
 		]
 	},
