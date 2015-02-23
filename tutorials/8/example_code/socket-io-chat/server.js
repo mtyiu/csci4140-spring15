@@ -4,10 +4,10 @@ app.get( '/', function( request, response ) {
 	response.sendFile( __dirname + '/views/index.html' );
 } );
 
-var server = app.listen( 4140, function() {
-	var host = server.address().address;
-	var port = server.address().port;
+var port = process.env.OPENSHIFT_NODEJS_PORT || 4140;
+var host = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
 
+var server = app.listen( port, host, function() {
 	console.log( 'Listening on http://%s:%s...', host, port );
 } );
 
