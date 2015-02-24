@@ -80,6 +80,11 @@
 												<strong>Note:</strong>
 												<span ng-bind-html="topic.note | raw"></span>
 											</p>
+											<p class="note text-muted" ng-if="topic.lastModified !== undefined">
+												<i class="fa fa-edit"></i>
+												<strong>Last modified:</strong>
+												{{ topic.lastModified }}
+											</p>
 										</div>
 										<div class="col-sm-5">
 											<div ng-show="topic.downloads !== null">
@@ -140,14 +145,18 @@
 								</h4>
 							</a>
 						</div>
-						<div class="panel-collapse collapse in" id="news">
-							<div class="panel-body">
-								<ul>
-									<li ng-repeat="item in news" class="{{ $first || item.highlight ? 'text-danger' : 'text-muted' }}">
+						<div class="panel-collapse collapse in">
+							<div class="panel-body news">
+								<strong>{{ news[ 0 ].date }}</strong>: 
+								{{ news[ 0 ].content }}
+							</div>
+						</div>
+						<div class="panel-collapse collapse" id="news">
+							<div class="panel-body news">
+									<p ng-repeat="item in news" ng-if="! $first" class="{{ item.highlight ? 'text-danger' : 'text-muted' }}">
 										<strong>{{ item.date }}</strong>: 
 										{{ item.content }}
-									</li>
-								</ul>
+									</p>
 							</div>
 						</div>
 					</div>

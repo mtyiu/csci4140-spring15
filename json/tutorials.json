@@ -8,7 +8,7 @@
 		"topics" : [
 			{
 				"title" : "Responsive Web Design with Bootstrap 3",
-				"note" : "<del>Pages 3-12 includes the requirements of the layout of Assignment 2.</del> Please refer to the tutorial notes of Week #7 for the requirements of the layout of Assignment 2.",
+				"note" : "Please refer to the tutorial notes of Week #7 for the requirements of the layout of Assignment 2.",
 				"outline" : [
 					"Assignment 2 overview – Layout design",
 					"CSS (Cascading Style Sheets)",
@@ -42,7 +42,8 @@
 					{ "type" : "pdf", "name" : "Download Notes", "link" : "tutorials/5/install-nodejs-on-linux-mac.pdf" },
 					{ "type" : "file", "name" : "hello.js", "link" : "tutorials/5/example_code/hello.js" },
 					{ "type" : "github", "name" : "hello.js", "link" : "https://github.com/mtyiu/csci4140-spring15/tree/gh-pages/tutorials/5/example_code/hello.js" }
-				]
+				],
+				"lastModified" : "20 February"
 			}
 		]
 	},
@@ -56,7 +57,6 @@
 		"topics" : [
 			{
 				"title" : "Assignment 2 Overview (Client Side) & Hints on Front-end Development",
-				"note" : "This set of slides has not yet been finalized and is subject to change.",
 				"outline" : [
 					"Demonstration",
 					"Client side: Layout design, QR code display, Playlist management & YouTube player control"
@@ -68,11 +68,11 @@
 					{ "type" : "download", "name" : "Screenshot", "link" : "#tut6-screenshot" }
 				],
 				"tags" : [ "QR code", "DOM scripting", "localStorage", "HTML5", "client" ],
-				"recommendation" : { "A Hilarious Collection of CSS Puns & Jokes" : "http://9gag.com/gag/azEj9jK" }
+				"recommendation" : { "A Hilarious Collection of CSS Puns & Jokes" : "http://9gag.com/gag/azEj9jK" },
+				"lastModified" : "24 February"
 			},
 			{
 				"title" : "YouTube IFrame Player API",
-				"note" : "[22 February] Updated pseudocode.",
 				"outline" : [
 					"Overview",
 					"Requirements",
@@ -86,7 +86,8 @@
 					{ "type" : "pdf", "name" : "Download Notes", "link" : "tutorials/6/youtube-iframe-api.pdf" },
 					{ "type" : "github", "name" : "Example Code", "link" : "https://github.com/mtyiu/csci4140-spring15/tree/gh-pages/tutorials/6/example_code/youtube-iframe-api" },
 					{ "type" : "html", "name" : "Demo Page", "link" : "tutorials/6/example_code/youtube-iframe-api/index.html" }
-				]
+				],
+				"lastModified" : "24 February"
 			}
 		]
 	},
@@ -99,7 +100,6 @@
 		"topics" : [
 			{
 				"title" : "Assignment 2 Overview (Server Side)",
-				"note" : "This set of slides has not yet been finalized and is subject to change.",
 				"outline" : [
 					"Work flow",
 					"Server side: Routing, Message forwarding, Retrieving video title"
@@ -107,11 +107,12 @@
 				"downloads" : [
 					{ "type" : "pdf", "name" : "Download Notes", "link" : "tutorials/7/asgn2-overview-server.pdf" }
 				],
-				"tags" : [ "server", "work flow", "routing", "message forwarding" ]
+				"tags" : [ "server", "work flow", "routing", "message forwarding" ],
+				"lastModified" : "24 February"
 			},
 			{
 				"title" : "Learning the Basics of Node.js",
-				"note" : "You are strongly encouraged to download the notes without solution and try the exercises before coming to the tutorial! (This set of slides has not yet been finalized and is subject to change.)",
+				"note" : "You are strongly encouraged to download the notes without solution and try the exercises before coming to the tutorial!",
 				"outline" : [
 					"What is Node.js?",
 					"Learning the basics of Node.js: Non-blocking I/O, HTTP"
@@ -139,11 +140,11 @@
 					{ "type" : "pdf", "name" : "Download Notes", "link" : "tutorials/8/express.pdf" },
 					{ "type" : "zip", "name" : "Example Code", "link" : "tutorials/8/example_code.zip" },
 					{ "type" : "github", "name" : "Example Code", "link" : "https://github.com/mtyiu/csci4140-spring15/tree/gh-pages/tutorials/8/example_code/express" }
-				]
+				],
+				"lastModified" : "24 February"
 			},
 			{
 				"title" : "WebSocket and Socket.IO",
-				"note" : "[23 February] Updated example code and slides. (This set of slides has not yet been finalized and is subject to change.)",
 				"downloads" : [
 					{ "type" : "pdf", "name" : "Download Notes", "link" : "tutorials/8/websocket-socket-io.pdf" },
 					{ "type" : "github", "name" : "Example Code", "link" : "https://github.com/mtyiu/csci4140-spring15/tree/gh-pages/tutorials/8/example_code/socket-io-chat" }
@@ -153,15 +154,16 @@
 					{ "name" : "GitHub (Client Side)", "href" : "https://github.com/cuhk-csci4140/N-Mario" },
 					{ "name" : "GitHub (Server Side)", "href" : "https://github.com/cuhk-csci4140/Node-Mario" },
 					{ "name" : "Video", "href" : "https://www.youtube.com/watch?v=cPkCh6Z9aQ4" }
-				]
+				],
+				"lastModified" : "24 February"
 			},
 			{
 				"title" : "Deploying Node.js Applications on OpenShift",
-				"note" : "[23 February] Added .gitignore in example code and updated slides.",
 				"downloads" : [
 					{ "type" : "pdf", "name" : "Download Notes", "link" : "tutorials/8/deploy-nodejs-openshift.pdf" },
 					{ "type" : "github", "name" : "Example Code", "link" : "https://github.com/mtyiu/csci4140-spring15/tree/gh-pages/tutorials/8/example_code/openshift" }
-				]
+				],
+				"lastModified" : "24 February"
 			}
 		]
 	},

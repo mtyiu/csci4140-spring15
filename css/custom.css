@@ -91,3 +91,9 @@ dl.dl-horizontal dd {
 .btn-default {
 	background-image: radial-gradient(circle, #f8f8f8 80%, #ddd 81%);
 }
+
+.news {
+	padding-left: 20px;
+	padding-right: 20px;
+	text-align: justify;
+}

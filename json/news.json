@@ -1,4 +1,5 @@
 [
+	{ "date" : "Feb 24", "content" : "Updated tutorial notes for Week #7-9 (and hopefully they are finalized). Most of the modifications are to fix typos or unclear statements. For those pages involving key changes, they are indicated on the top right hand corner. Anyway, please download all the slides again." },
 	{ "date" : "Feb 23", "content" : "Updated tutorial notes and example code for Week #9." },
 	{ "date" : "Feb 22", "content" : "Updated pseudocode on tutorial notes for Week #7: \"YouTube IFrame Player API\"." },
 	{ "date" : "Feb 21", "content" : "Uploaded tutorial notes for Week #8: \"Learning the Basics of Node.js\" and Week #9: \"WebSocket and Socket.IO\"" },
