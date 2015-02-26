@@ -65,7 +65,9 @@
 					{ "type" : "pdf", "name" : "Download Notes", "link" : "tutorials/6/asgn2-overview-client.pdf" },
 					{ "type" : "zip", "name" : "Example Code", "link" : "tutorials/6/example_code.zip" },
 					{ "type" : "html", "name" : "Demo Page", "link" : "tutorials/6/example_code/qr_code/qr_code.html" },
-					{ "type" : "download", "name" : "Screenshot", "link" : "#tut6-screenshot" }
+					{ "type" : "download", "name" : "Screenshot", "link" : "#tut6-screenshot" },
+					{ "type" : "youtube", "name" : "Assignment 2 Demo (Cantonese)", "link" : "http://youtu.be/_C6rnalqMIM" },
+					{ "type" : "youtube", "name" : "Assignment 2 Demo (English)", "link" : "http://youtu.be/MXoByOGBszY" }
 				],
 				"tags" : [ "QR code", "DOM scripting", "localStorage", "HTML5", "client" ],
 				"recommendation" : { "A Hilarious Collection of CSS Puns & Jokes" : "http://9gag.com/gag/azEj9jK" },

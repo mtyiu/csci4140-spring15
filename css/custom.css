@@ -92,6 +92,18 @@ dl.dl-horizontal dd {
 	background-image: radial-gradient(circle, #f8f8f8 80%, #ddd 81%);
 }
 
+.bg-alert {
+	color: #fff;
+	background-color: #aaa;
+}
+
+.alert a {
+	color: #eee !important;
+	font-weight: normal !important;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
 .news {
 	padding-left: 20px;
 	padding-right: 20px;
