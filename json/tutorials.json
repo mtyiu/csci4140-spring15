@@ -51,8 +51,8 @@
 		"week" : 7,
 		"date" : "26 February 2015",
 		"theme" : "Assignment 2 Overview (Client Side) & Front-end Development",
-		"current" : true,
-		"display" : true,
+		"current" : false,
+		"display" : false,
 		"target" : "Students can start implementing the player and control logic of Assignment 2 (locally)",
 		"topics" : [
 			{
@@ -97,7 +97,8 @@
 		"week" : 8,
 		"date" : "5 March 2015",
 		"theme" : "Assignment 2 Overview (Server Side) & Back-end Development",
-		"display" : false,
+		"current" : true,
+		"display" : true,
 		"target" : "Students can start implementing the back-end of Assignment 2",
 		"topics" : [
 			{
