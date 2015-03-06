@@ -111,8 +111,7 @@
 					{ "type" : "pdf", "name" : "Download Notes", "link" : "tutorials/7/asgn2-overview-server.pdf" }
 				],
 				"tags" : [ "server", "work flow", "routing", "message forwarding" ],
-				"lastModified" : "24 February",
-				"note" : "Page 17 updated."
+				"lastModified" : "24 February"
 			},
 			{
 				"title" : "Learning the Basics of Node.js",
