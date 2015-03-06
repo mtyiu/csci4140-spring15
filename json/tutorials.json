@@ -116,7 +116,7 @@
 			},
 			{
 				"title" : "Learning the Basics of Node.js",
-				"note" : "You are strongly encouraged to download the notes without solution and try the exercises before coming to the tutorial!",
+				"note" : "Page 17 updated. (You are strongly encouraged to download the notes without solution and try the exercises before coming to the tutorial!)",
 				"outline" : [
 					"What is Node.js?",
 					"Learning the basics of Node.js: Non-blocking I/O, HTTP"
@@ -129,8 +129,7 @@
 				],
 				"tags" : [ "events", "asynchronous I/O", "callback", "module", "npm", "closure" ],
 				"recommendation" : { "nodeschool.io" : "http://nodeschool.io/", "Are all JavaScript callbacks asynchronous?" : "http://stackoverflow.com/questions/19083357/are-all-javascript-callbacks-asynchronous-if-not-how-do-i-know-which-are", "Control flow in Node.js" : "http://book.mixu.net/node/ch7.html" },
-				"lastModified" : "6 March",
-				"note" : "Page 17 updated."
+				"lastModified" : "6 March"
 			}
 		]
 	},
