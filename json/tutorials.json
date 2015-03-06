@@ -111,7 +111,7 @@
 					{ "type" : "pdf", "name" : "Download Notes", "link" : "tutorials/7/asgn2-overview-server.pdf" }
 				],
 				"tags" : [ "server", "work flow", "routing", "message forwarding" ],
-				"lastModified" : "6 March",
+				"lastModified" : "24 February",
 				"note" : "Page 17 updated."
 			},
 			{
@@ -128,7 +128,9 @@
 					{ "type" : "github", "name" : "Example Code", "link" : "https://github.com/mtyiu/csci4140-spring15/tree/gh-pages/tutorials/7/example_code/nodejs" }
 				],
 				"tags" : [ "events", "asynchronous I/O", "callback", "module", "npm", "closure" ],
-				"recommendation" : { "nodeschool.io" : "http://nodeschool.io/", "Are all JavaScript callbacks asynchronous?" : "http://stackoverflow.com/questions/19083357/are-all-javascript-callbacks-asynchronous-if-not-how-do-i-know-which-are", "Control flow in Node.js" : "http://book.mixu.net/node/ch7.html" }
+				"recommendation" : { "nodeschool.io" : "http://nodeschool.io/", "Are all JavaScript callbacks asynchronous?" : "http://stackoverflow.com/questions/19083357/are-all-javascript-callbacks-asynchronous-if-not-how-do-i-know-which-are", "Control flow in Node.js" : "http://book.mixu.net/node/ch7.html" },
+				"lastModified" : "6 March",
+				"note" : "Page 17 updated."
 			}
 		]
 	},
