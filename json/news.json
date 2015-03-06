@@ -1,4 +1,5 @@
 [
+	{ "date" : "Mar 6", "content" : "I made a mistake on the slides: \"Learning the basics of Node.js\", page 17. Please download the slides again." },
 	{ "date" : "Mar 5", "content" : "Updated today's recommendation." },
 	{ "date" : "Feb 26", "content" : "The recording of Assignment 2 Demonstration in today's tutorial are uploaded." },
 	{ "date" : "Feb 24", "content" : "Updated tutorial notes for Week #7-9 (and hopefully they are finalized). Most of the modifications are to fix typos or unclear statements. For those pages involving key changes, they are indicated on the top right hand corner. Anyway, please download all the slides again." },
