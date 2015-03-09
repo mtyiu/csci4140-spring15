@@ -51,7 +51,6 @@
 		"week" : 7,
 		"date" : "26 February 2015",
 		"theme" : "Assignment 2 Overview (Client Side) & Front-end Development",
-		"current" : false,
 		"display" : false,
 		"target" : "Students can start implementing the player and control logic of Assignment 2 (locally)",
 		"topics" : [
@@ -97,9 +96,8 @@
 		"week" : 8,
 		"date" : "5 March 2015",
 		"theme" : "Assignment 2 Overview (Server Side) & Back-end Development",
-		"current" : true,
-		"display" : true,
 		"target" : "Students can start implementing the back-end of Assignment 2",
+		"display" : false,
 		"topics" : [
 			{
 				"title" : "Assignment 2 Overview (Server Side)",
@@ -115,7 +113,7 @@
 			},
 			{
 				"title" : "Learning the Basics of Node.js",
-				"note" : "Page 17 updated. (You are strongly encouraged to download the notes without solution and try the exercises before coming to the tutorial!)",
+				"note" : "Page 17 updated.",
 				"outline" : [
 					"What is Node.js?",
 					"Learning the basics of Node.js: Non-blocking I/O, HTTP"
@@ -136,9 +134,14 @@
 		"week" : 9,
 		"date" : "12 March 2015",
 		"theme" : "Back-end Development (Continued)",
-		"display" : false,
+		"display" : true,
+		"current" : true,
 		"target" : "Students should complete Assignment 2 after this tutorial",
 		"topics" : [
+			{
+				"title" : "Learning the Basics of Node.js",
+				"note" : "Continued...Please find the download link in Week #8."
+			},
 			{
 				"title" : "Express Web Framework",
 				"downloads" : [
@@ -168,7 +171,7 @@
 					{ "type" : "pdf", "name" : "Download Notes", "link" : "tutorials/8/deploy-nodejs-openshift.pdf" },
 					{ "type" : "github", "name" : "Example Code", "link" : "https://github.com/mtyiu/csci4140-spring15/tree/gh-pages/tutorials/8/example_code/openshift" }
 				],
-				"lastModified" : "24 February"
+				"lastModified" : "9 March"
 			}
 		]
 	},
@@ -180,24 +183,34 @@
 		"target" : "Students should already complete Assignment 2",
 		"topics" : [
 			{
-				"title" : "More about Assignment 2",
-				"downloads" : null
+				"title" : "Express Web Framework",
+				"note" : "Continued...Please find the download link in Week #9."
 			},
 			{
 				"title" : "Remote debugging on Android or iOS devices",
-				"downloads" : null,
+				"downloads" : [ { "type" : "pdf", "name" : "Download Notes", "link" : "tutorials/9/remote-debugging-android-ios.pdf" } ],
 				"outline" : [
 					"Why remote debugging?",
 					"Requirements",
 					"Remote debugging on Android",
 					"Remote debugging on iOS"
-				]
+				],
+				"tags" : [ "iOS", "Android", "Safari", "Chrome", "Firefox", "USB debugging" ],
+				"lastModified" : "9 March"
 			}
 		]
 	},
 	{
-		"week" : "?",
-		"date" : "TBD",
+		"week" : "11-13",
+		"date" : "26 March & 2, 9 April 2015",
+		"theme" : "Assignment 3",
+		"display" : false,
+		"target" : "Please go to <a href=\"http://appsrv.cse.cuhk.edu.hk/~csci4140/course-homepage-4140/tutorial.php\">the course homepage</a> for the tutorial notes.",
+		"topics" : []
+	},
+	{
+		"week" : 14,
+		"date" : "16 April 2015",
 		"theme" : "Bonus materials",
 		"display" : false,
 		"target" : "The matrials are optional and may be useful for your projects :-)",

@@ -1,4 +1,5 @@
 [
+	{ "date" : "Mar 9", "content" : "Updated schedule, updated tutorial notes for Week #9: \"Deploying Node.js Applications on OpenShift\" and uploaded new tutorial notes for Week #10: \"Remote debugging on Android or iOS devices\"." },
 	{ "date" : "Mar 6", "content" : "I made a mistake on the slides: \"Learning the basics of Node.js\", page 17. Please download the slides again." },
 	{ "date" : "Mar 5", "content" : "Updated today's recommendation." },
 	{ "date" : "Feb 26", "content" : "The recording of Assignment 2 Demonstration in today's tutorial are uploaded." },
