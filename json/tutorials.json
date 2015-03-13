@@ -139,6 +139,14 @@
 		"target" : "Students should complete Assignment 2 after this tutorial",
 		"topics" : [
 			{
+				"title" : "Tutorial Video Recording",
+				"well" : true,
+				"note" : "Only Cantonese version is available because this is dedicated to the students who attended the H4 session",
+				"downloads" : [
+					{ "type" : "youtube", "name" : "Watch Video", "link" : "http://youtu.be/aQ0aBRngVW8" }
+				]
+			},
+			{
 				"title" : "Learning the Basics of Node.js",
 				"note" : "Continued...Please find the download link in Week #8."
 			},
