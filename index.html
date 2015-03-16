@@ -113,6 +113,10 @@
 														<i class="fa fa-youtube"></i>&nbsp;&nbsp;
 														{{ d.name }}
 													</button>
+													<button class="btn btn-block btn-sm btn-default" ng-switch-when="link" ng-click="download( d.link )">
+														<i class="fa fa-external-link"></i>&nbsp;&nbsp;
+														{{ d.name }}
+													</button>
 													<a href="{{ d.link }}" data-toggle="modal" class="btn btn-block btn-sm btn-default" ng-switch-when="demo">
 														<i class="fa fa-eye"></i>&nbsp;&nbsp;
 														{{ d.name }}
