@@ -134,7 +134,7 @@
 		"week" : 9,
 		"date" : "12 March 2015",
 		"theme" : "Back-end Development (Continued)",
-		"display" : false,
+		"display" : true,
 		"target" : "Students should complete Assignment 2 after this tutorial",
 		"topics" : [
 			{
@@ -164,13 +164,14 @@
 					{ "type" : "pdf", "name" : "Download Notes", "link" : "tutorials/8/websocket-socket-io.pdf" },
 					{ "type" : "github", "name" : "Example Code", "link" : "https://github.com/mtyiu/csci4140-spring15/tree/gh-pages/tutorials/8/example_code/socket-io-chat" }
 				],
+				"note" : "Updated pp. 7, 8; added p. 14.",
 				"recommendations" : [ 
 					{ "name" : "N-Mario", "href" : "https://cherrry.github.io/N-Mario" },
 					{ "name" : "GitHub (Client Side)", "href" : "https://github.com/cuhk-csci4140/N-Mario" },
 					{ "name" : "GitHub (Server Side)", "href" : "https://github.com/cuhk-csci4140/Node-Mario" },
 					{ "name" : "Video", "href" : "https://www.youtube.com/watch?v=cPkCh6Z9aQ4" }
 				],
-				"lastModified" : "24 February"
+				"lastModified" : "17 February"
 			},
 			{
 				"title" : "Deploying Node.js Applications on OpenShift",
@@ -178,7 +179,8 @@
 					{ "type" : "pdf", "name" : "Download Notes", "link" : "tutorials/8/deploy-nodejs-openshift.pdf" },
 					{ "type" : "github", "name" : "Example Code", "link" : "https://github.com/mtyiu/csci4140-spring15/tree/gh-pages/tutorials/8/example_code/openshift" }
 				],
-				"lastModified" : "9 March"
+				"note" : "Added p. 15.",
+				"lastModified" : "17 March"
 			}
 		]
 	},

@@ -165,14 +165,14 @@
 						<div class="panel-collapse collapse in">
 							<div class="panel-body news">
 								<strong>{{ news[ 0 ].date }}</strong>: 
-								{{ news[ 0 ].content }}
+								<span ng-bind-html="news[ 0 ].content | raw"></span>
 							</div>
 						</div>
 						<div class="panel-collapse collapse" id="news">
 							<div class="panel-body news">
 									<p ng-repeat="item in news" ng-if="! $first" class="{{ item.highlight ? 'text-danger' : 'text-muted' }}">
 										<strong>{{ item.date }}</strong>: 
-										{{ item.content }}
+										<span ng-bind-html="item.content | raw"></span>
 									</p>
 							</div>
 						</div>

@@ -42,7 +42,7 @@
 		</div>
 		<script src="/socket.io/socket.io.js"></script>
 		<script>
-			var socket = io();
+			var socket = io( 'ws://' + window.location.hostname + ':8000/' );
 			var form = document.querySelector( '#form' );
 			var m = document.querySelector( '#m' );
 			form.addEventListener( 'submit', function( e ) {
