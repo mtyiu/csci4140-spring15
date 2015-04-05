@@ -1,4 +1,5 @@
 [
+	{ "date" : "Apr 5", "content" : "See you again on April 16!" },
 	{ "date" : "Mar 17", "content" : "If you encounter WebSocket connection problems in OpenShift, it means that you did not specify the full URL in your client page (and this is my fault...I forget to include it in the slides). Please follow the instructions <a href=\"tutorials/8/ws-openshift.png\" target=\"_blank\">here</a> to modify the JavaScript code of your HTML page. <br />Two set of slides in Week #9 are updated accordingly: <ul><li>\"WebSocket and Socket.IO\": Updated pp. 7, 8; added p. 14.</li><li>\"Deploying Node.js Applications on OpenShift\": Added p. 15.</li></ul> The example code is also updated. Sorry for any inconvenience caused." },
 	{ "date" : "Mar 16", "content" : "Updated materials for our final tutorial on Assignment 2 :)" },
 	{ "date" : "Mar 13", "content" : "Uploaded tutorial video recording for Week #9." },
