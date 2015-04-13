@@ -1,0 +1,7 @@
+cuhk_cse_guestbook_homepage:
+    path:     /
+    defaults: { _controller: CuhkCseGuestbookBundle:Default:index }
+
+cuhk_cse_guestbook_form:
+    path:     /form/{id}
+    defaults: { _controller: CuhkCseGuestbookBundle:Default:form, id : null }

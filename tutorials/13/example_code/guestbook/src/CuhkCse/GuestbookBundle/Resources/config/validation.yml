@@ -1,0 +1,8 @@
+CuhkCse\GuestbookBundle\Entity\Message:
+    properties:
+        name:
+            - NotBlank: ~
+        email:
+            - NotBlank: ~
+        message:
+            - NotBlank: ~
