@@ -237,7 +237,7 @@
 					{ "type" : "pdf", "name" : "Download Notes", "link" : "tutorials/13/symfony.pdf" },
 					{ "type" : "html", "name" : "Guide of Developing A Guest book", "link" : "tutorials/13/guestbook.html" },
 					{ "type" : "zip", "name" : "Example Code", "link" : "tutorials/13/example_code.zip" },
-					{ "type" : "github", "name" : "Example Code", "link" : "https://github.com/mtyiu/csci4140-spring15/tree/gh-pages/tutorials/13/example_code/guestbook" },
+					{ "type" : "github", "name" : "Example Code", "link" : "https://github.com/mtyiu/symfony-demo-guestbook" },
 					{ "type" : "link", "name" : "The Symfony Book (HTML)", "link" : "http://symfony.com/doc/current/book/index.html" },
 					{ "type" : "link", "name" : "The Symfony Cookbook (HTML)", "link" : "http://symfony.com/doc/current/cookbook/index.html" }
 				]
