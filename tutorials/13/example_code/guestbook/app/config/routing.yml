@@ -1,7 +1,0 @@
-cuhk_cse_guestbook:
-    resource: "@CuhkCseGuestbookBundle/Resources/config/routing.yml"
-    prefix:   /
-
-app:
-    resource: "@AppBundle/Controller/"
-    type:     annotation
