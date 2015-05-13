@@ -13,7 +13,3 @@ $( function() {
 		$( '.collapse-outline' ).collapse( 'toggle' )
 	} )
 } )
-
-function download( url ) {
-	ga( 'send', 'event', 'download', url )
-}
