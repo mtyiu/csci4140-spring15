@@ -1,10 +1,11 @@
-var app = angular.module( 'csci4140App', [ 'angular-loading-bar', 'ngAnimate' ] );
+var app = angular.module( 'csci4140App', [ 'angular-loading-bar', 'ngAnimate', 'seo' ] );
 
 app.controller( 'defaultController', function ( $scope, $http ) {
 	$scope.download = function( url ) {
 		window.open( url, '_blank' );
 		ga( 'send', 'event', 'download', url );
 	};
+	$scope.count = 0;
 
 	var jsons = [ 'news', 'metadata', 'navs', 'modals', 'tutorials' ];
 	for ( var i in jsons ) {
@@ -12,6 +13,10 @@ app.controller( 'defaultController', function ( $scope, $http ) {
 			var key = jsons[ i ];
 			return function( data ) {
 				$scope[ key ] = data;
+				$scope.count++;
+				if ( $scope.count == jsons.length ) {
+					$scope.htmlReady();
+				}
 			}
 		}() );
 	}

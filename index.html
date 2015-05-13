@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="csci4140App">
+<html lang="en">
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Includes tutorial notes on responsive web design, Bootstrap, YouTube IFrame Player API, Node.js, Express, Socket.IO, remote debugging on Android and iOS, OpenShift and Symfony. The materials are dedicated for the course CSCI 4140: Open-Source Software Project Development (Spring 2015), offered by Department of Computer Science and Engineering, The Chinese University of Hong Kong.">
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href="css/font-awesome.min.css" rel="stylesheet">
-		<link href="css/loading-bar.min.css" rel="stylesheet">
 		<link href="css/custom.css" rel="stylesheet">
 		<link href="favicon.png" rel="icon" type="image/png" />
 		<!--[if lt IE 9]>
@@ -14,128 +14,736 @@
 			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
 		<script src="js/ga.js"></script>
-		<script src="js/jquery.min.js"></script>
-		<script src="js/angular.min.js"></script>
-		<script src="js/loading-bar.min.js"></script>
-		<script src="js/angular-animate.min.js"></script>
-		<script src="js/controllers.js"></script>
 		<title>CSCI 4140: Open-Source Software Project Development - Tutorial Resource Page</title>
 	</head>
-	<body ng-controller="defaultController">
+	<body>
 		<div class="container">
 			<header>
 				<h3>
-					<small>{{ metadata.course.code }}<span class="visible-sm-inline visible-md-inline visible-lg-inline">: {{ metadata.course.title }}</span> ({{ metadata.semester }})</small><br />
-					{{ metadata.pageTitle }}
+					<small>CSCI 4140<span class="visible-sm-inline visible-md-inline visible-lg-inline">: Open-Source Software Project Development</span> (Spring 2015)</small><br>
+					Tutorial Resource Page
 				</h3>
-				<hr />
+				<hr>
 			</header>
-
 			<div class="row">
 				<main class="col-md-8 col-md-push-4">
 					<div class="panel-group" id="tutorials" role="tablist" aria-multiselectable="true">
-						<div class="panel panel-{{ tutorial.current ? 'primary' : 'default' }}" ng-repeat="tutorial in tutorials">
-							<div class="panel-heading" role="tab" id="#tut-heading-{{ tutorial.week }}">
+						<div class="panel panel-default">
+							<div class="panel-heading" role="tab" id="#tut-heading-6">
 								<h4 class="panel-title">
-									<a data-toggle="collapse" href="#tut-{{ tutorial.week == '?' ? 'X' : tutorial.week }}" aria-expanded="true" aria-controls="tut-{{ tutorial.week == '?' ? 'X' : tutorial.week }}">
-										<span class="week">Week #{{ tutorial.week }}</span><span class="date">({{ tutorial.date }}):</span><span class="theme-title">{{ tutorial.theme }}</span>
+									<a data-toggle="collapse" href="#tut-6" aria-expanded="true" aria-controls="tut-6">
+										<span class="week">Week #6</span><span class="date">(12 February 2015):</span><span class="theme-title">UI Design</span>
 										<span class="pull-right">
 											<i class="fa fa-bars"></i>
 										</span>
 									</a>
 								</h4>
 							</div>
-							<div id="tut-{{ tutorial.week == '?' ? 'X' : tutorial.week }}" class="panel-collapse collapse-tut collapse{{ tutorial.display ? ' in' : '' }}{{ tutorial.current ? ' current' : '' }}" role="tabpanel" aria-labelledby="tut-heading-{{ tutorial.week }}">
+							<div id="tut-6" class="panel-collapse collapse-tut collapse in" role="tabpanel" aria-labelledby="tut-heading-6">
 								<div class="panel-body">
-									<div class="row" ng-class="{ true : 'well-ph', false : '' }[ topic.well !== undefined && topic.well ]" ng-repeat-start="topic in tutorial.topics">
+									<div class="row">
 										<div class="col-sm-7">
-											<strong class="topic">{{ topic.title }}</strong>
-											<a data-toggle="collapse" href="#tut-{{ tutorial.week }}-outline-{{ $index }}" aria-expanded="false" aria-controls="tut-{{ tutorial.week }}-outline-{{ $index }}" ng-if="topic.outline !== undefined">
+											<strong class="topic">Responsive Web Design with Bootstrap 3</strong>
+											<a data-toggle="collapse" href="#tut-6-outline-0" aria-expanded="false" aria-controls="tut-6-outline-0">
 												[Outline]
 											</a>
-											<div class="collapse collapse-outline" id="tut-{{ tutorial.week }}-outline-{{ $index }}" ng-if="topic.outline !== undefined">
+											<div class="collapse collapse-outline" id="tut-6-outline-0">
 												<div class="outline">
 													<ul>
-														<li ng-repeat="o in topic.outline">{{ o }}</li>
+														<li>Assignment 2 overview – Layout design</li><li>CSS (Cascading Style Sheets)</li><li>Font Awesome</li><li>Responsive web design (RWD)</li><li>CSS media queries</li><li>Bootstrap 3</li><li>Setting up the development environment for Node.js and Express</li>
 													</ul>
 												</div>
 											</div>
-											<p class="recommendation" ng-if="topic.recommendation !== undefined">
+											<p class="recommendation">
 												<i class="fa fa-thumbs-up"></i>
 												<strong>Recommendation:</strong>
-												<a href="{{ href }}" target="_blank" ng-repeat-start="(name, href) in topic.recommendation">{{ name }}</a><span ng-repeat-end ng-if="! $last">, </span>
+												<a href="http://flukeout.github.io/" target="_blank">CSS Diner</a>
 											</p>
-											<p class="recommendation" ng-if="topic.recommendations !== undefined">
-												<i class="fa fa-thumbs-up"></i>
-												<strong>Recommendation:</strong>
-												<a href="{{ r.href }}" target="_blank" ng-repeat-start="r in topic.recommendations">{{ r.name }}</a><span ng-repeat-end ng-if="! $last">, </span>
-											</p>
-											<p class="tags" ng-if="topic.tags.length > 0">
+											<p class="tags">
 												<i class="fa fa-tags"></i>
 												<strong>Tags:</strong>
-												<span ng-repeat="tag in topic.tags" class="badge tag">{{ tag }}</span>
+												<span class="badge tag">layout</span><span class="badge tag">css</span><span class="badge tag">font awesome</span><span class="badge tag">responsive web design</span><span class="badge tag">media queries</span><span class="badge tag">bootstrap</span>
 											</p>
-											<p class="note text-danger" ng-if="topic.note !== undefined">
+											<p class="note text-danger">
 												<i class="fa fa-bullhorn"></i>
 												<strong>Note:</strong>
-												<span ng-bind-html="topic.note | raw"></span>
-											</p>
-											<p class="note text-muted" ng-if="topic.lastModified !== undefined">
-												<i class="fa fa-edit"></i>
-												<strong>Last modified:</strong>
-												{{ topic.lastModified }}
+												<span>Please refer to the tutorial notes of Week #7 for the requirements of the layout of Assignment 2.</span>
 											</p>
 										</div>
 										<div class="col-sm-5">
-											<div ng-show="topic.downloads !== null">
-												<div ng-switch="d.type" ng-repeat="d in topic.downloads" class="downloads">
-													<button class="btn btn-block btn-sm btn-primary" ng-switch-when="pdf" ng-click="download( d.link )">
+											<div>
+												<div class="downloads">
+													<button class="btn btn-block btn-sm btn-primary" onclick="download( 'tutorials/5/bootstrap.pdf' )">
 														<i class="fa fa-file-pdf-o"></i>&nbsp;&nbsp;
-														{{ d.name }} ({{ d.type }})
+														Download Notes (pdf)
 													</button>
-													<button class="btn btn-block btn-sm btn-default" ng-switch-when="zip" ng-click="download( d.link )">
+												</div><div class="downloads">
+													<button class="btn btn-block btn-sm btn-default" onclick="download( 'tutorials/5/example_code.zip' )">
 														<i class="fa fa-file-zip-o"></i>&nbsp;&nbsp;
-														{{ d.name }} ({{ d.type }})
+														Example Code (zip)
 													</button>
-													<button class="btn btn-block btn-sm btn-default" ng-switch-when="file" ng-click="download( d.link )">
-														<i class="fa fa-file-o"></i>&nbsp;&nbsp;
-														{{ d.name }} ({{ d.type }})
-													</button>
-													<button class="btn btn-block btn-sm btn-default" ng-switch-when="github" ng-click="download( d.link )">
+												</div><div class="downloads">
+													<button class="btn btn-block btn-sm btn-default" onclick="download( 'https://github.com/mtyiu/csci4140-spring15/tree/gh-pages/tutorials/5/example_code' )">
 														<i class="fa fa-github-square"></i>&nbsp;&nbsp;
-														{{ d.name }} ({{ d.type }})
+														Example Code (github)
 													</button>
-													<button class="btn btn-block btn-sm btn-default" ng-switch-when="html" ng-click="download( d.link )">
+												</div><div class="downloads">
+													<a href="#tut5-demo" data-toggle="modal" class="btn btn-block btn-sm btn-default">
 														<i class="fa fa-eye"></i>&nbsp;&nbsp;
-														{{ d.name }}
-													</button>
-													<button class="btn btn-block btn-sm btn-default" ng-switch-when="youtube" ng-click="download( d.link )">
-														<i class="fa fa-youtube"></i>&nbsp;&nbsp;
-														{{ d.name }}
-													</button>
-													<button class="btn btn-block btn-sm btn-default" ng-switch-when="link" ng-click="download( d.link )">
-														<i class="fa fa-external-link"></i>&nbsp;&nbsp;
-														{{ d.name }}
-													</button>
-													<a href="{{ d.link }}" data-toggle="modal" class="btn btn-block btn-sm btn-default" ng-switch-when="demo">
-														<i class="fa fa-eye"></i>&nbsp;&nbsp;
-														{{ d.name }}
-													</a>
-													<a href="{{ d.link }}" data-toggle="modal" class="btn btn-block btn-sm btn-default" ng-switch-when="download">
-														<i class="fa fa-download"></i>&nbsp;&nbsp;
-														{{ d.name }}
+														Demo Pages
 													</a>
 												</div>
 											</div>
-											<div class="text-muted text-center" ng-show="topic.downloads === null">
-												Not ready
+										</div>
+									</div>
+									<div class="divider"></div><div class="row">
+										<div class="col-sm-7">
+											<strong class="topic">Installing Node.js and Express on Windows</strong>
+											
+										</div>
+										<div class="col-sm-5">
+											<div>
+												<div class="downloads">
+													<button class="btn btn-block btn-sm btn-primary" onclick="download( 'tutorials/5/install-nodejs-on-windows.pdf' )">
+														<i class="fa fa-file-pdf-o"></i>&nbsp;&nbsp;
+														Download Notes (pdf)
+													</button>
+												</div><div class="downloads">
+													<button class="btn btn-block btn-sm btn-default" onclick="download( 'tutorials/5/example_code/hello.js' )">
+														<i class="fa fa-file-o"></i>&nbsp;&nbsp;
+														hello.js (file)
+													</button>
+												</div><div class="downloads">
+													<button class="btn btn-block btn-sm btn-default" onclick="download( 'https://github.com/mtyiu/csci4140-spring15/tree/gh-pages/tutorials/5/example_code/hello.js' )">
+														<i class="fa fa-github-square"></i>&nbsp;&nbsp;
+														hello.js (github)
+													</button>
+												</div>
 											</div>
 										</div>
 									</div>
-									<div ng-repeat-end class="divider"></div>
+									<div class="divider"></div><div class="row">
+										<div class="col-sm-7">
+											<strong class="topic">Installing Node.js and Express on Linux or Mac</strong>
+											
+											<p class="note text-danger">
+												<i class="fa fa-bullhorn"></i>
+												<strong>Note:</strong>
+												<span>[20 February] Page 21 updated.</span>
+											</p>
+											<p class="note text-muted">
+												<i class="fa fa-edit"></i>
+												<strong>Last modified:</strong>
+												20 February
+											</p>
+										</div>
+										<div class="col-sm-5">
+											<div>
+												<div class="downloads">
+													<button class="btn btn-block btn-sm btn-primary" onclick="download( 'tutorials/5/install-nodejs-on-linux-mac.pdf' )">
+														<i class="fa fa-file-pdf-o"></i>&nbsp;&nbsp;
+														Download Notes (pdf)
+													</button>
+												</div><div class="downloads">
+													<button class="btn btn-block btn-sm btn-default" onclick="download( 'tutorials/5/example_code/hello.js' )">
+														<i class="fa fa-file-o"></i>&nbsp;&nbsp;
+														hello.js (file)
+													</button>
+												</div><div class="downloads">
+													<button class="btn btn-block btn-sm btn-default" onclick="download( 'https://github.com/mtyiu/csci4140-spring15/tree/gh-pages/tutorials/5/example_code/hello.js' )">
+														<i class="fa fa-github-square"></i>&nbsp;&nbsp;
+														hello.js (github)
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="divider"></div>
 									<p class="target">
 										<i class="fa fa-check-circle"></i>
-										 <span ng-bind-html="tutorial.target | raw"></span>
+										 <span>Students can start implementing the UI of Assignment 2</span>
+									</p>
+								</div>
+							</div>
+						</div><div class="panel panel-default">
+							<div class="panel-heading" role="tab" id="#tut-heading-7">
+								<h4 class="panel-title">
+									<a data-toggle="collapse" href="#tut-7" aria-expanded="true" aria-controls="tut-7">
+										<span class="week">Week #7</span><span class="date">(26 February 2015):</span><span class="theme-title">Assignment 2 Overview (Client Side) &amp; Front-end Development</span>
+										<span class="pull-right">
+											<i class="fa fa-bars"></i>
+										</span>
+									</a>
+								</h4>
+							</div>
+							<div id="tut-7" class="panel-collapse collapse-tut collapse in" role="tabpanel" aria-labelledby="tut-heading-7">
+								<div class="panel-body">
+									<div class="row">
+										<div class="col-sm-7">
+											<strong class="topic">Assignment 2 Overview (Client Side) &amp; Hints on Front-end Development</strong>
+											<a data-toggle="collapse" href="#tut-7-outline-0" aria-expanded="false" aria-controls="tut-7-outline-0">
+												[Outline]
+											</a>
+											<div class="collapse collapse-outline" id="tut-7-outline-0">
+												<div class="outline">
+													<ul>
+														<li>Demonstration</li><li>Client side: Layout design, QR code display, Playlist management &amp; YouTube player control</li>
+													</ul>
+												</div>
+											</div>
+											<p class="recommendation">
+												<i class="fa fa-thumbs-up"></i>
+												<strong>Recommendation:</strong>
+												<a href="http://9gag.com/gag/azEj9jK" target="_blank">A Hilarious Collection of CSS Puns &amp; Jokes</a>
+											</p>
+											<p class="tags">
+												<i class="fa fa-tags"></i>
+												<strong>Tags:</strong>
+												<span class="badge tag">QR code</span><span class="badge tag">DOM scripting</span><span class="badge tag">localStorage</span><span class="badge tag">HTML5</span><span class="badge tag">client</span>
+											</p>
+											<p class="note text-muted">
+												<i class="fa fa-edit"></i>
+												<strong>Last modified:</strong>
+												24 February
+											</p>
+										</div>
+										<div class="col-sm-5">
+											<div>
+												<div class="downloads">
+													<button class="btn btn-block btn-sm btn-primary" onclick="download( 'tutorials/6/asgn2-overview-client.pdf' )">
+														<i class="fa fa-file-pdf-o"></i>&nbsp;&nbsp;
+														Download Notes (pdf)
+													</button>
+												</div><div class="downloads">
+													<button class="btn btn-block btn-sm btn-default" onclick="download( 'tutorials/6/example_code.zip' )">
+														<i class="fa fa-file-zip-o"></i>&nbsp;&nbsp;
+														Example Code (zip)
+													</button>
+												</div><div class="downloads">
+													<button class="btn btn-block btn-sm btn-default" onclick="download( 'tutorials/6/example_code/qr_code/qr_code.html' )">
+														<i class="fa fa-eye"></i>&nbsp;&nbsp;
+														Demo Page
+													</button>
+												</div><div class="downloads">
+													<a href="#tut6-screenshot" data-toggle="modal" class="btn btn-block btn-sm btn-default">
+														<i class="fa fa-download"></i>&nbsp;&nbsp;
+														Screenshot
+													</a>
+												</div><div class="downloads">
+													<button class="btn btn-block btn-sm btn-default" onclick="download( 'http://youtu.be/_C6rnalqMIM' )">
+														<i class="fa fa-youtube"></i>&nbsp;&nbsp;
+														Assignment 2 Demo (Cantonese)
+													</button>
+												</div><div class="downloads">
+													<button class="btn btn-block btn-sm btn-default" onclick="download( 'http://youtu.be/MXoByOGBszY' )">
+														<i class="fa fa-youtube"></i>&nbsp;&nbsp;
+														Assignment 2 Demo (English)
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="divider"></div><div class="row">
+										<div class="col-sm-7">
+											<strong class="topic">YouTube IFrame Player API</strong>
+											<a data-toggle="collapse" href="#tut-7-outline-1" aria-expanded="false" aria-controls="tut-7-outline-1">
+												[Outline]
+											</a>
+											<div class="collapse collapse-outline" id="tut-7-outline-1">
+												<div class="outline">
+													<ul>
+														<li>Overview</li><li>Requirements</li><li>Getting started</li><li>Operations: Play, Pause, Stop, Mute, Unmute, Fast Forward, Rewind, Next Video, Previous Video</li><li>The onStateChange event</li><li>Destroying the player</li><li>Reference</li>
+													</ul>
+												</div>
+											</div>
+											
+											<p class="note text-muted">
+												<i class="fa fa-edit"></i>
+												<strong>Last modified:</strong>
+												24 February
+											</p>
+										</div>
+										<div class="col-sm-5">
+											<div>
+												<div class="downloads">
+													<button class="btn btn-block btn-sm btn-primary" onclick="download( 'tutorials/6/youtube-iframe-api.pdf' )">
+														<i class="fa fa-file-pdf-o"></i>&nbsp;&nbsp;
+														Download Notes (pdf)
+													</button>
+												</div><div class="downloads">
+													<button class="btn btn-block btn-sm btn-default" onclick="download( 'https://github.com/mtyiu/csci4140-spring15/tree/gh-pages/tutorials/6/example_code/youtube-iframe-api' )">
+														<i class="fa fa-github-square"></i>&nbsp;&nbsp;
+														Example Code (github)
+													</button>
+												</div><div class="downloads">
+													<button class="btn btn-block btn-sm btn-default" onclick="download( 'tutorials/6/example_code/youtube-iframe-api/index.html' )">
+														<i class="fa fa-eye"></i>&nbsp;&nbsp;
+														Demo Page
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="divider"></div>
+									<p class="target">
+										<i class="fa fa-check-circle"></i>
+										 <span>Students can start implementing the player and control logic of Assignment 2 (locally)</span>
+									</p>
+								</div>
+							</div>
+						</div><div class="panel panel-default">
+							<div class="panel-heading" role="tab" id="#tut-heading-8">
+								<h4 class="panel-title">
+									<a data-toggle="collapse" href="#tut-8" aria-expanded="true" aria-controls="tut-8">
+										<span class="week">Week #8</span><span class="date">(5 March 2015):</span><span class="theme-title">Assignment 2 Overview (Server Side) &amp; Back-end Development</span>
+										<span class="pull-right">
+											<i class="fa fa-bars"></i>
+										</span>
+									</a>
+								</h4>
+							</div>
+							<div id="tut-8" class="panel-collapse collapse-tut collapse in" role="tabpanel" aria-labelledby="tut-heading-8">
+								<div class="panel-body">
+									<div class="row">
+										<div class="col-sm-7">
+											<strong class="topic">Assignment 2 Overview (Server Side)</strong>
+											<a data-toggle="collapse" href="#tut-8-outline-0" aria-expanded="false" aria-controls="tut-8-outline-0">
+												[Outline]
+											</a>
+											<div class="collapse collapse-outline" id="tut-8-outline-0">
+												<div class="outline">
+													<ul>
+														<li>Work flow</li><li>Server side: Routing, Message forwarding, Retrieving video title</li>
+													</ul>
+												</div>
+											</div>
+											<p class="tags">
+												<i class="fa fa-tags"></i>
+												<strong>Tags:</strong>
+												<span class="badge tag">server</span><span class="badge tag">work flow</span><span class="badge tag">routing</span><span class="badge tag">message forwarding</span>
+											</p>
+											<p class="note text-muted">
+												<i class="fa fa-edit"></i>
+												<strong>Last modified:</strong>
+												24 February
+											</p>
+										</div>
+										<div class="col-sm-5">
+											<div>
+												<div class="downloads">
+													<button class="btn btn-block btn-sm btn-primary" onclick="download( 'tutorials/7/asgn2-overview-server.pdf' )">
+														<i class="fa fa-file-pdf-o"></i>&nbsp;&nbsp;
+														Download Notes (pdf)
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="divider"></div><div class="row">
+										<div class="col-sm-7">
+											<strong class="topic">Learning the Basics of Node.js</strong>
+											<a data-toggle="collapse" href="#tut-8-outline-1" aria-expanded="false" aria-controls="tut-8-outline-1">
+												[Outline]
+											</a>
+											<div class="collapse collapse-outline" id="tut-8-outline-1">
+												<div class="outline">
+													<ul>
+														<li>What is Node.js?</li><li>Learning the basics of Node.js: Non-blocking I/O, HTTP</li>
+													</ul>
+												</div>
+											</div>
+											<p class="recommendation">
+												<i class="fa fa-thumbs-up"></i>
+												<strong>Recommendation:</strong>
+												<a href="http://stackoverflow.com/questions/19083357/are-all-javascript-callbacks-asynchronous-if-not-how-do-i-know-which-are" target="_blank">Are all JavaScript callbacks asynchronous?</a><span>, </span><a href="http://book.mixu.net/node/ch7.html" target="_blank">Control flow in Node.js</a><span>, </span><a href="http://nodeschool.io/" target="_blank">nodeschool.io</a>
+											</p>
+											<p class="tags">
+												<i class="fa fa-tags"></i>
+												<strong>Tags:</strong>
+												<span class="badge tag">events</span><span class="badge tag">asynchronous I/O</span><span class="badge tag">callback</span><span class="badge tag">module</span><span class="badge tag">npm</span><span class="badge tag">closure</span>
+											</p>
+											<p class="note text-danger">
+												<i class="fa fa-bullhorn"></i>
+												<strong>Note:</strong>
+												<span>Page 17 updated.</span>
+											</p>
+											<p class="note text-muted">
+												<i class="fa fa-edit"></i>
+												<strong>Last modified:</strong>
+												6 March
+											</p>
+										</div>
+										<div class="col-sm-5">
+											<div>
+												<div class="downloads">
+													<button class="btn btn-block btn-sm btn-primary" onclick="download( 'tutorials/7/nodejs-wo-soln.pdf' )">
+														<i class="fa fa-file-pdf-o"></i>&nbsp;&nbsp;
+														Download Notes (wo/ Solution) (pdf)
+													</button>
+												</div><div class="downloads">
+													<button class="btn btn-block btn-sm btn-primary" onclick="download( 'tutorials/7/nodejs.pdf' )">
+														<i class="fa fa-file-pdf-o"></i>&nbsp;&nbsp;
+														Download Notes (w/ Solution) (pdf)
+													</button>
+												</div><div class="downloads">
+													<button class="btn btn-block btn-sm btn-default" onclick="download( 'tutorials/7/example_code.zip' )">
+														<i class="fa fa-file-zip-o"></i>&nbsp;&nbsp;
+														Example Code (zip)
+													</button>
+												</div><div class="downloads">
+													<button class="btn btn-block btn-sm btn-default" onclick="download( 'https://github.com/mtyiu/csci4140-spring15/tree/gh-pages/tutorials/7/example_code/nodejs' )">
+														<i class="fa fa-github-square"></i>&nbsp;&nbsp;
+														Example Code (github)
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="divider"></div>
+									<p class="target">
+										<i class="fa fa-check-circle"></i>
+										 <span>Students can start implementing the back-end of Assignment 2</span>
+									</p>
+								</div>
+							</div>
+						</div><div class="panel panel-default">
+							<div class="panel-heading" role="tab" id="#tut-heading-9">
+								<h4 class="panel-title">
+									<a data-toggle="collapse" href="#tut-9" aria-expanded="true" aria-controls="tut-9">
+										<span class="week">Week #9</span><span class="date">(12 March 2015):</span><span class="theme-title">Back-end Development (Continued)</span>
+										<span class="pull-right">
+											<i class="fa fa-bars"></i>
+										</span>
+									</a>
+								</h4>
+							</div>
+							<div id="tut-9" class="panel-collapse collapse-tut collapse in" role="tabpanel" aria-labelledby="tut-heading-9">
+								<div class="panel-body">
+									<div class="row">
+										<div class="col-sm-7">
+											<strong class="topic">Learning the Basics of Node.js</strong>
+											
+											<p class="note text-danger">
+												<i class="fa fa-bullhorn"></i>
+												<strong>Note:</strong>
+												<span>Continued...Please find the downloa'' in Week #8.</span>
+											</p>
+										</div>
+										<div class="col-sm-5">
+											<div>
+											</div>
+										</div>
+									</div>
+									<div class="divider"></div><div class="row">
+										<div class="col-sm-7">
+											<strong class="topic">Express Web Framework</strong>
+											
+											<p class="note text-muted">
+												<i class="fa fa-edit"></i>
+												<strong>Last modified:</strong>
+												24 February
+											</p>
+										</div>
+										<div class="col-sm-5">
+											<div>
+												<div class="downloads">
+													<button class="btn btn-block btn-sm btn-primary" onclick="download( 'tutorials/8/express.pdf' )">
+														<i class="fa fa-file-pdf-o"></i>&nbsp;&nbsp;
+														Download Notes (pdf)
+													</button>
+												</div><div class="downloads">
+													<button class="btn btn-block btn-sm btn-default" onclick="download( 'tutorials/8/example_code.zip' )">
+														<i class="fa fa-file-zip-o"></i>&nbsp;&nbsp;
+														Example Code (zip)
+													</button>
+												</div><div class="downloads">
+													<button class="btn btn-block btn-sm btn-default" onclick="download( 'https://github.com/mtyiu/csci4140-spring15/tree/gh-pages/tutorials/8/example_code/express' )">
+														<i class="fa fa-github-square"></i>&nbsp;&nbsp;
+														Example Code (github)
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="divider"></div><div class="row">
+										<div class="col-sm-7">
+											<strong class="topic">WebSocket and Socket.IO</strong>
+											<p class="recommendation">
+												<i class="fa fa-thumbs-up"></i>
+												<strong>Recommendation:</strong>
+												<a href="https://cherrry.github.io/N-Mario" target="_blank">N-Mario</a><span>, </span><a href="https://github.com/cuhk-csci4140/N-Mario" target="_blank">GitHub (Client Side)</a><span>, </span><a href="https://github.com/cuhk-csci4140/Node-Mario" target="_blank">GitHub (Server Side)</a><span>, </span><a href="https://www.youtube.com/watch?v=cPkCh6Z9aQ4" target="_blank">Video</a>
+											</p>
+											
+											<p class="note text-danger">
+												<i class="fa fa-bullhorn"></i>
+												<strong>Note:</strong>
+												<span>Updated pp. 7, 8; added p. 14.</span>
+											</p>
+											<p class="note text-muted">
+												<i class="fa fa-edit"></i>
+												<strong>Last modified:</strong>
+												17 March
+											</p>
+										</div>
+										<div class="col-sm-5">
+											<div>
+												<div class="downloads">
+													<button class="btn btn-block btn-sm btn-primary" onclick="download( 'tutorials/8/websocket-socket-io.pdf' )">
+														<i class="fa fa-file-pdf-o"></i>&nbsp;&nbsp;
+														Download Notes (pdf)
+													</button>
+												</div><div class="downloads">
+													<button class="btn btn-block btn-sm btn-default" onclick="download( 'https://github.com/mtyiu/csci4140-spring15/tree/gh-pages/tutorials/8/example_code/socket-io-chat' )">
+														<i class="fa fa-github-square"></i>&nbsp;&nbsp;
+														Example Code (github)
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="divider"></div><div class="row">
+										<div class="col-sm-7">
+											<strong class="topic">Deploying Node.js Applications on OpenShift</strong>
+											
+											<p class="note text-danger">
+												<i class="fa fa-bullhorn"></i>
+												<strong>Note:</strong>
+												<span>Added p. 15.</span>
+											</p>
+											<p class="note text-muted">
+												<i class="fa fa-edit"></i>
+												<strong>Last modified:</strong>
+												17 March
+											</p>
+										</div>
+										<div class="col-sm-5">
+											<div>
+												<div class="downloads">
+													<button class="btn btn-block btn-sm btn-primary" onclick="download( 'tutorials/8/deploy-nodejs-openshift.pdf' )">
+														<i class="fa fa-file-pdf-o"></i>&nbsp;&nbsp;
+														Download Notes (pdf)
+													</button>
+												</div><div class="downloads">
+													<button class="btn btn-block btn-sm btn-default" onclick="download( 'https://github.com/mtyiu/csci4140-spring15/tree/gh-pages/tutorials/8/example_code/openshift' )">
+														<i class="fa fa-github-square"></i>&nbsp;&nbsp;
+														Example Code (github)
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="divider"></div>
+									<p class="target">
+										<i class="fa fa-check-circle"></i>
+										 <span>Students should complete Assignment 2 after this tutorial</span>
+									</p>
+								</div>
+							</div>
+						</div><div class="panel panel-default">
+							<div class="panel-heading" role="tab" id="#tut-heading-10">
+								<h4 class="panel-title">
+									<a data-toggle="collapse" href="#tut-10" aria-expanded="true" aria-controls="tut-10">
+										<span class="week">Week #10</span><span class="date">(19 March 2015):</span><span class="theme-title">More about Assignment 2</span>
+										<span class="pull-right">
+											<i class="fa fa-bars"></i>
+										</span>
+									</a>
+								</h4>
+							</div>
+							<div id="tut-10" class="panel-collapse collapse-tut collapse in" role="tabpanel" aria-labelledby="tut-heading-10">
+								<div class="panel-body">
+									<div class="row">
+										<div class="col-sm-7">
+											<strong class="topic">Express Web Framework</strong>
+											
+											<p class="note text-danger">
+												<i class="fa fa-bullhorn"></i>
+												<strong>Note:</strong>
+												<span>Continued...Please find the downloa'' in Week #9.</span>
+											</p>
+										</div>
+										<div class="col-sm-5">
+											<div>
+											</div>
+										</div>
+									</div>
+									<div class="divider"></div><div class="row">
+										<div class="col-sm-7">
+											<strong class="topic">Remote debugging on Android or iOS devices</strong>
+											<a data-toggle="collapse" href="#tut-10-outline-1" aria-expanded="false" aria-controls="tut-10-outline-1">
+												[Outline]
+											</a>
+											<div class="collapse collapse-outline" id="tut-10-outline-1">
+												<div class="outline">
+													<ul>
+														<li>Why remote debugging?</li><li>Requirements</li><li>Remote debugging on Android</li><li>Remote debugging on iOS</li>
+													</ul>
+												</div>
+											</div>
+											<p class="tags">
+												<i class="fa fa-tags"></i>
+												<strong>Tags:</strong>
+												<span class="badge tag">iOS</span><span class="badge tag">Android</span><span class="badge tag">Safari</span><span class="badge tag">Chrome</span><span class="badge tag">Firefox</span><span class="badge tag">USB debugging</span>
+											</p>
+											<p class="note text-muted">
+												<i class="fa fa-edit"></i>
+												<strong>Last modified:</strong>
+												9 March
+											</p>
+										</div>
+										<div class="col-sm-5">
+											<div>
+												<div class="downloads">
+													<button class="btn btn-block btn-sm btn-primary" onclick="download( 'tutorials/9/remote-debugging-android-ios.pdf' )">
+														<i class="fa fa-file-pdf-o"></i>&nbsp;&nbsp;
+														Download Notes (pdf)
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="divider"></div><div class="row">
+										<div class="col-sm-7">
+											<strong class="topic">Debugging WebSocket in Chrome or Firefox</strong>
+											
+										</div>
+										<div class="col-sm-5">
+											<div>
+												<div class="downloads">
+													<button class="btn btn-block btn-sm btn-default" onclick="download( 'tutorials/9/ws-debug/' )">
+														<i class="fa fa-external-link"></i>&nbsp;&nbsp;
+														View Notes (HTML)
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="divider"></div><div class="row">
+										<div class="col-sm-7">
+											<strong class="topic">Assignment 2 Final Checklist</strong>
+											
+											<p class="note text-danger">
+												<i class="fa fa-bullhorn"></i>
+												<strong>Note:</strong>
+												<span>Read this page carefully before you submit your assignment!</span>
+											</p>
+										</div>
+										<div class="col-sm-5">
+											<div>
+												<div class="downloads">
+													<button class="btn btn-block btn-sm btn-default" onclick="download( 'tutorials/9/checklist.html' )">
+														<i class="fa fa-external-link"></i>&nbsp;&nbsp;
+														View Notes (HTML)
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="divider"></div><div class="row">
+										<div class="col-sm-7">
+											<strong class="topic">Submission Guideline</strong>
+											
+										</div>
+										<div class="col-sm-5">
+											<div>
+												<div class="downloads">
+													<button class="btn btn-block btn-sm btn-default" onclick="download( 'http://appsrv.cse.cuhk.edu.hk/~csci4140/course-homepage-4140/submission.php' )">
+														<i class="fa fa-external-link"></i>&nbsp;&nbsp;
+														View Notes (HTML)
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="divider"></div>
+									<p class="target">
+										<i class="fa fa-check-circle"></i>
+										 <span>Deadline of Assignment 2: 23:59, 2015 March 29 (Sun)</span>
+									</p>
+								</div>
+							</div>
+						</div><div class="panel panel-default">
+							<div class="panel-heading" role="tab" id="#tut-heading-11-13">
+								<h4 class="panel-title">
+									<a data-toggle="collapse" href="#tut-11-13" aria-expanded="true" aria-controls="tut-11-13">
+										<span class="week">Week #11-13</span><span class="date">(26 March &amp; 2, 9 April 2015):</span><span class="theme-title">Assignment 3</span>
+										<span class="pull-right">
+											<i class="fa fa-bars"></i>
+										</span>
+									</a>
+								</h4>
+							</div>
+							<div id="tut-11-13" class="panel-collapse collapse-tut collapse" role="tabpanel" aria-labelledby="tut-heading-11-13">
+								<div class="panel-body">
+									<p class="target">
+										<i class="fa fa-check-circle"></i>
+										 <span>Please go to <a href="http://appsrv.cse.cuhk.edu.hk/~csci4140/course-homepage-4140/tutorial.php">the course homepage</a> for the tutorial notes.</span>
+									</p>
+								</div>
+							</div>
+						</div><div class="panel panel-primary">
+							<div class="panel-heading" role="tab" id="#tut-heading-14">
+								<h4 class="panel-title">
+									<a data-toggle="collapse" href="#tut-14" aria-expanded="true" aria-controls="tut-14">
+										<span class="week">Week #14</span><span class="date">(16 April 2015):</span><span class="theme-title">Bonus materials</span>
+										<span class="pull-right">
+											<i class="fa fa-bars"></i>
+										</span>
+									</a>
+								</h4>
+							</div>
+							<div id="tut-14" class="panel-collapse collapse-tut collapse in" role="tabpanel" aria-labelledby="tut-heading-14">
+								<div class="panel-body">
+									<div class="row">
+										<div class="col-sm-7">
+											<strong class="topic">Symfony: PHP framework for web projects</strong>
+											
+											<p class="note text-danger">
+												<i class="fa fa-bullhorn"></i>
+												<strong>Note:</strong>
+												<span>During the tutorial, I will select some of the important topics in Symfony and go through the development process with you. You are assumed to have a good background of PHP.</span>
+											</p>
+										</div>
+										<div class="col-sm-5">
+											<div>
+												<div class="downloads">
+													<button class="btn btn-block btn-sm btn-primary" onclick="download( 'tutorials/13/symfony.pdf' )">
+														<i class="fa fa-file-pdf-o"></i>&nbsp;&nbsp;
+														Download Notes (pdf)
+													</button>
+												</div><div class="downloads">
+													<button class="btn btn-block btn-sm btn-default" onclick="download( 'tutorials/13/guestbook.html' )">
+														<i class="fa fa-eye"></i>&nbsp;&nbsp;
+														Guide of Developing A Guest book
+													</button>
+												</div><div class="downloads">
+													<button class="btn btn-block btn-sm btn-default" onclick="download( 'tutorials/13/example_code.zip' )">
+														<i class="fa fa-file-zip-o"></i>&nbsp;&nbsp;
+														Example Code (zip)
+													</button>
+												</div><div class="downloads">
+													<button class="btn btn-block btn-sm btn-default" onclick="download( 'https://github.com/mtyiu/symfony-demo-guestbook' )">
+														<i class="fa fa-github-square"></i>&nbsp;&nbsp;
+														Example Code (github)
+													</button>
+												</div><div class="downloads">
+													<button class="btn btn-block btn-sm btn-default" onclick="download( 'http://symfony.com/doc/current/book/index.html' )">
+														<i class="fa fa-external-link"></i>&nbsp;&nbsp;
+														The Symfony Book (HTML)
+													</button>
+												</div><div class="downloads">
+													<button class="btn btn-block btn-sm btn-default" onclick="download( 'http://symfony.com/doc/current/cookbook/index.html' )">
+														<i class="fa fa-external-link"></i>&nbsp;&nbsp;
+														The Symfony Cookbook (HTML)
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="divider"></div>
+									<p class="target">
+										<i class="fa fa-check-circle"></i>
+										 <span>The matrials are optional and may be useful for your projects :-)</span>
 									</p>
 								</div>
 							</div>
@@ -143,7 +751,7 @@
 					</div>
 				</main>
 				<aside role="navigation" class="col-md-4 col-md-pull-8">
-					<span class="visible-xs-inline visible-sm-inline"><br /></span>
+					<span class="visible-xs-inline visible-sm-inline"><br></span>
 					<div class="panel panel-danger">
 						<div class="panel-heading">
 							<a data-toggle="collapse" href="#news">
@@ -155,15 +763,69 @@
 						</div>
 						<div class="panel-collapse collapse in">
 							<div class="panel-body news">
-								<strong>{{ news[ 0 ].date }}</strong>: 
-								<span ng-bind-html="news[ 0 ].content | raw"></span>
+								<strong>May 13</strong>: 
+								<span>The tutorial site is updated - all AngularJS related stuffs are removed to make it search engine friendly. You can still access the AngularJS version <a href="ng-index.html" rel="nofollow">here</a>.</span>
 							</div>
 						</div>
 						<div class="panel-collapse collapse" id="news">
 							<div class="panel-body news">
-									<p ng-repeat="item in news" ng-if="! $first" class="{{ item.highlight ? 'text-danger' : 'text-muted' }}">
-										<strong>{{ item.date }}</strong>: 
-										<span ng-bind-html="item.content | raw"></span>
+									<p class="text-muted">
+										<strong>Apr 14</strong>: 
+										<span>The tutorial notes on Symfony are ready. See you this Thursday!</span>
+									</p><p class="text-muted">
+										<strong>Apr 5</strong>: 
+										<span>See you again on April 16!</span>
+									</p><p class="text-muted">
+										<strong>Mar 17</strong>: 
+										<span>If you encounter WebSocket connection problems in OpenShift, it means that you did not specify the full URL in your client page (and this is my fault...I forget to include it in the slides). Please follow the instructions <a href="tutorials/8/ws-openshift.png" target="_blank">here</a> to modify the JavaScript code of your HTML page. <br>Two set of slides in Week #9 are updated accordingly: <ul><li>"WebSocket and Socket.IO": Updated pp. 7, 8; added p. 14.</li><li>"Deploying Node.js Applications on OpenShift": Added p. 15.</li></ul> The example code is also updated. Sorry for any inconvenience caused.</span>
+									</p><p class="text-muted">
+										<strong>Mar 16</strong>: 
+										<span>Updated materials for our final tutorial on Assignment 2 :)</span>
+									</p><p class="text-muted">
+										<strong>Mar 13</strong>: 
+										<span>Uploaded tutorial video recording for Week #9.</span>
+									</p><p class="text-muted">
+										<strong>Mar 9</strong>: 
+										<span>Updated schedule, updated tutorial notes for Week #9: "Deploying Node.js Applications on OpenShift" and uploaded new tutorial notes for Week #10: "Remote debugging on Android or iOS devices".</span>
+									</p><p class="text-muted">
+										<strong>Mar 6</strong>: 
+										<span>I made a mistake on the slides: "Learning the basics of Node.js", page 17. Please download the slides again.</span>
+									</p><p class="text-muted">
+										<strong>Mar 5</strong>: 
+										<span>Updated today's recommendation.</span>
+									</p><p class="text-muted">
+										<strong>Feb 26</strong>: 
+										<span>The recording of Assignment 2 Demonstration in today's tutorial are uploaded.</span>
+									</p><p class="text-muted">
+										<strong>Feb 24</strong>: 
+										<span>Updated tutorial notes for Week #7-9 (and hopefully they are finalized). Most of the modifications are to fix typos or unclear statements. For those pages involving key changes, they are indicated on the top right hand corner. Anyway, please download all the slides again.</span>
+									</p><p class="text-muted">
+										<strong>Feb 23</strong>: 
+										<span>Updated tutorial notes and example code for Week #9.</span>
+									</p><p class="text-muted">
+										<strong>Feb 22</strong>: 
+										<span>Updated pseudocode on tutorial notes for Week #7: "YouTube IFrame Player API".</span>
+									</p><p class="text-muted">
+										<strong>Feb 21</strong>: 
+										<span>Uploaded tutorial notes for Week #8: "Learning the Basics of Node.js" and Week #9: "WebSocket and Socket.IO"</span>
+									</p><p class="text-muted">
+										<strong>Feb 20</strong>: 
+										<span>Uploaded tutorial notes for Week #8: "Assignment 2 Overview (Server Side)" &amp; Week #9: "Deploying Node.js Applications on OpenShift".</span>
+									</p><p class="text-muted">
+										<strong>Feb 20</strong>: 
+										<span>Fixed typo in "Installing Node.js and Express on Linux or Mac" (Week #6).</span>
+									</p><p class="text-muted">
+										<strong>Feb 19</strong>: 
+										<span>Uploaded tutorial notes for Week #7.</span>
+									</p><p class="text-muted">
+										<strong>Feb 10</strong>: 
+										<span>Added this week's recommendation.</span>
+									</p><p class="text-muted">
+										<strong>Feb 4</strong>: 
+										<span>Uploaded tutorial notes for Week #6.</span>
+									</p><p class="text-muted">
+										<strong>Jan 29</strong>: 
+										<span>Created page.</span>
 									</p>
 							</div>
 						</div>
@@ -181,27 +843,35 @@
 							<div class="panel-body">
 								<dl class="dl-horizontal">
 									<dt>Tutor</dt>
-									<dd><a href="{{ metadata.author.homepage }}" target="_blank">{{ metadata.author.name }}</a></dd>
+									<dd><a href="http://www.cse.cuhk.edu.hk/~mtyiu/" target="_blank">Matt YIU Man Tung</a></dd>
 									<dt>Email</dt>
-									<dd><a href="mailto:{{ metadata.author.email }}">{{ metadata.author.email }}</a></dd>
+									<dd><a href="mailto:mtyiu@cse.cuhk.edu.hk">mtyiu@cse.cuhk.edu.hk</a></dd>
 									<dt>Office</dt>
-									<dd>{{ metadata.author.office }}</dd>
+									<dd>SHB 118</dd>
 									<dt>Office Hour</dt>
-									<dd>{{ metadata.author.officeHour }}</dd>
+									<dd>Tuesday 3-5 pm</dd>
 								</dl>
 								<table class="table table-striped">
-									<tr>
+									<tbody><tr>
 										<th colspan="2">Time</th>
 										<th>Venue</th>
 									</tr>
-									<tr ng-repeat="tutorial in metadata.tutorials">
-										<td>{{ tutorial.abbr }}</td>
-										<td>{{ tutorial.weekday }}, {{ tutorial.time }}</td>
-										<td>{{ tutorial.venue }}</td>
+									<tr>
+										<td>H4</td>
+										<td>Thursday, 11:30am - 12:15pm</td>
+										<td>ERB 404</td>
+									</tr><tr>
+										<td>H7</td>
+										<td>Thursday, 2:30 - 3:15pm</td>
+										<td>ERB 404</td>
+									</tr><tr>
+										<td>H10</td>
+										<td>Thursday, 5:30 - 6:15pm</td>
+										<td>ERB 405</td>
 									</tr>
-								</table>
+								</tbody></table>
 								<div class="text-center">
-									<a href="{{ metadata.feedback }}" target="_blank" class="btn btn-block btn-default">Tutorial Feedback Form</a>
+									<a href="https://docs.google.com/forms/d/1vrrVRL7dppymvxWvlnycFlK9XMal_WgeIt9bhMdqVks/viewform" target="_blank" class="btn btn-block btn-default">Tutorial Feedback Form</a>
 								</div>
 							</div>
 						</div>
@@ -228,80 +898,250 @@
 							</a>
 						</li>
 						<li><div class="divider"></div></li>
-						<li ng-repeat="nav in navs" ng-switch="nav.type">
-							<a ng-switch-when="normal" href="{{ nav.href }}" target="_blank">
-								<i class="fa fa-{{ nav.icon }}"></i> {{ nav.name }}
+						<li>
+							<a href="https://github.com/mtyiu/csci4140-spring15" target="_blank">
+								<i class="fa fa-github-alt"></i> GitHub for example code
 							</a>
-							<a ng-switch-when="modal" data-toggle="modal" href="#{{ nav.href }}">
-								<i class="fa fa-{{ nav.icon }}"></i> {{ nav.name }}
+						</li><li>
+							<a data-toggle="modal" href="#about">
+								<i class="fa fa-newspaper-o"></i> About this Page
+							</a>
+						</li><li>
+							<a href="http://www.cse.cuhk.edu.hk/csci4140/" target="_blank">
+								<i class="fa fa-university"></i> Course Homepage
+							</a>
+						</li><li>
+							<a href="http://www.cse.cuhk.edu.hk/~mtyiu/" target="_blank">
+								<i class="fa fa-user"></i> View My Homepage
 							</a>
 						</li>
 					</ul>
 				</aside>
 			</div>
-
 			<footer>
-				<hr />
+				<hr>
 				<div class="pull-left">
 					<p class="text-muted">
-						Created by <a href="mailto:{{ metadata.author.email }}">{{ metadata.author.name }}</a> @ {{ metadata.created }}
+						Created by <a href="mailto:mtyiu@cse.cuhk.edu.hk">Matt YIU Man Tung</a> @ 29 January 2015
 					</p>
 				</div>
 				<div class="pull-right">
 					<p class="text-muted">
-						Last Updated: {{ metadata.lastModified }}
+						Last Updated: 14 April 2015
 					</p>
 				</div>
 			</footer>
 		</div>
-
-		<!-- Modals -->
-		<div class="modal fade" id="{{ modal.id }}" tabindex="-1" role="dialog" ng-repeat="modal in modals">
+		<div class="modal fade" id="about" tabindex="-1" role="dialog">
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-							<span aria-hidden="true">&times;</span>
+							<span aria-hidden="true">×</span>
 						</button>
-						<h4 class="modal-title">{{ modal.title }}</h4>
+						<h4 class="modal-title">About this Page</h4>
 					</div>
 					<div class="modal-body">
-						<p ng-if="modal.type == 'normal'" ng-repeat="line in modal.contents">{{ line }}</p>
-						<div ng-if="modal.type == 'demo'">
+						<p>This page is dedicated for hosting the tutorial notes and example code of the tutorials conducted by Matt YIU Man Tung.</p><p>This page is built by AngularJS, jQuery and Bootstrap.</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div>
+		<div class="modal fade" id="tut5-demo" tabindex="-1" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">×</span>
+						</button>
+						<h4 class="modal-title">Responsive Web Design with Bootstrap 3</h4>
+					</div>
+					<div class="modal-body">
+						<div>
 							<h5>Demo Pages</h5>
-							<div class="row" ng-repeat-start="page in modal.contents">
+							<div class="row">
 								<div class="col-sm-6">
-									<strong>{{ page.category }}:</strong>
-									{{ page.title }}
+									<strong>CSS:</strong>
+									H1 (Original)
 								</div>
 								<div class="col-sm-3">
-									<button class="btn btn-block btn-sm btn-primary" ng-click="download( page.link )">
+									<button class="btn btn-block btn-sm btn-primary" onclick="download( page.link )">
 										<i class="fa fa-eye"></i>&nbsp;&nbsp;
 										View Page
 									</button>
 								</div>
 								<div class="col-sm-3">
-									<button class="btn btn-block btn-sm btn-default" ng-click="download( page.source )">
+									<button class="btn btn-block btn-sm btn-default" onclick="download( page.source )">
 										<i class="fa fa-file-o"></i>&nbsp;&nbsp;
 										View Source
 									</button>
 								</div>
 							</div>
-							<div ng-repeat-end class="divider-demo" ng-if="! $last"></div>
-						</div>
-						<div ng-if="modal.type == 'download'">
-							<div class="row" ng-repeat-start="item in modal.contents">
-								<div class="col-sm-8">
-									{{ item.title }}
+							<div class="divider-demo"></div><div class="row">
+								<div class="col-sm-6">
+									<strong>CSS:</strong>
+									H1 (With CSS)
 								</div>
-								<div class="col-sm-4">
-									<button class="btn btn-block btn-sm btn-primary" ng-click="download( item.link )">
-										<i class="fa fa-download"></i>&nbsp;&nbsp;
-										Download
+								<div class="col-sm-3">
+									<button class="btn btn-block btn-sm btn-primary" onclick="download( page.link )">
+										<i class="fa fa-eye"></i>&nbsp;&nbsp;
+										View Page
+									</button>
+								</div>
+								<div class="col-sm-3">
+									<button class="btn btn-block btn-sm btn-default" onclick="download( page.source )">
+										<i class="fa fa-file-o"></i>&nbsp;&nbsp;
+										View Source
 									</button>
 								</div>
 							</div>
-							<div ng-repeat-end class="divider-demo" ng-if="! $last"></div>
+							<div class="divider-demo"></div><div class="row">
+								<div class="col-sm-6">
+									<strong>Font Awesome:</strong>
+									Example
+								</div>
+								<div class="col-sm-3">
+									<button class="btn btn-block btn-sm btn-primary" onclick="download( page.link )">
+										<i class="fa fa-eye"></i>&nbsp;&nbsp;
+										View Page
+									</button>
+								</div>
+								<div class="col-sm-3">
+									<button class="btn btn-block btn-sm btn-default" onclick="download( page.source )">
+										<i class="fa fa-file-o"></i>&nbsp;&nbsp;
+										View Source
+									</button>
+								</div>
+							</div>
+							<div class="divider-demo"></div><div class="row">
+								<div class="col-sm-6">
+									<strong>CSS Media Queries:</strong>
+									Sidebar
+								</div>
+								<div class="col-sm-3">
+									<button class="btn btn-block btn-sm btn-primary" onclick="download( page.link )">
+										<i class="fa fa-eye"></i>&nbsp;&nbsp;
+										View Page
+									</button>
+								</div>
+								<div class="col-sm-3">
+									<button class="btn btn-block btn-sm btn-default" onclick="download( page.source )">
+										<i class="fa fa-file-o"></i>&nbsp;&nbsp;
+										View Source
+									</button>
+								</div>
+							</div>
+							<div class="divider-demo"></div><div class="row">
+								<div class="col-sm-6">
+									<strong>CSS Media Queries:</strong>
+									Changing background color
+								</div>
+								<div class="col-sm-3">
+									<button class="btn btn-block btn-sm btn-primary" onclick="download( page.link )">
+										<i class="fa fa-eye"></i>&nbsp;&nbsp;
+										View Page
+									</button>
+								</div>
+								<div class="col-sm-3">
+									<button class="btn btn-block btn-sm btn-default" onclick="download( page.source )">
+										<i class="fa fa-file-o"></i>&nbsp;&nbsp;
+										View Source
+									</button>
+								</div>
+							</div>
+							<div class="divider-demo"></div><div class="row">
+								<div class="col-sm-6">
+									<strong>Bootstrap:</strong>
+									container VS. container-fluid
+								</div>
+								<div class="col-sm-3">
+									<button class="btn btn-block btn-sm btn-primary" onclick="download( page.link )">
+										<i class="fa fa-eye"></i>&nbsp;&nbsp;
+										View Page
+									</button>
+								</div>
+								<div class="col-sm-3">
+									<button class="btn btn-block btn-sm btn-default" onclick="download( page.source )">
+										<i class="fa fa-file-o"></i>&nbsp;&nbsp;
+										View Source
+									</button>
+								</div>
+							</div>
+							<div class="divider-demo"></div><div class="row">
+								<div class="col-sm-6">
+									<strong>Bootstrap:</strong>
+									Grid system (Basic)
+								</div>
+								<div class="col-sm-3">
+									<button class="btn btn-block btn-sm btn-primary" onclick="download( page.link )">
+										<i class="fa fa-eye"></i>&nbsp;&nbsp;
+										View Page
+									</button>
+								</div>
+								<div class="col-sm-3">
+									<button class="btn btn-block btn-sm btn-default" onclick="download( page.source )">
+										<i class="fa fa-file-o"></i>&nbsp;&nbsp;
+										View Source
+									</button>
+								</div>
+							</div>
+							<div class="divider-demo"></div><div class="row">
+								<div class="col-sm-6">
+									<strong>Bootstrap:</strong>
+									Grid system (Advanced)
+								</div>
+								<div class="col-sm-3">
+									<button class="btn btn-block btn-sm btn-primary" onclick="download( page.link )">
+										<i class="fa fa-eye"></i>&nbsp;&nbsp;
+										View Page
+									</button>
+								</div>
+								<div class="col-sm-3">
+									<button class="btn btn-block btn-sm btn-default" onclick="download( page.source )">
+										<i class="fa fa-file-o"></i>&nbsp;&nbsp;
+										View Source
+									</button>
+								</div>
+							</div>
+							<div class="divider-demo"></div><div class="row">
+								<div class="col-sm-6">
+									<strong>Bootstrap:</strong>
+									ERGWAVE Login Portal (Original)
+								</div>
+								<div class="col-sm-3">
+									<button class="btn btn-block btn-sm btn-primary" onclick="download( page.link )">
+										<i class="fa fa-eye"></i>&nbsp;&nbsp;
+										View Page
+									</button>
+								</div>
+								<div class="col-sm-3">
+									<button class="btn btn-block btn-sm btn-default" onclick="download( page.source )">
+										<i class="fa fa-file-o"></i>&nbsp;&nbsp;
+										View Source
+									</button>
+								</div>
+							</div>
+							<div class="divider-demo"></div><div class="row">
+								<div class="col-sm-6">
+									<strong>Bootstrap:</strong>
+									ERGWAVE Login Portal (Responsive)
+								</div>
+								<div class="col-sm-3">
+									<button class="btn btn-block btn-sm btn-primary" onclick="download( page.link )">
+										<i class="fa fa-eye"></i>&nbsp;&nbsp;
+										View Page
+									</button>
+								</div>
+								<div class="col-sm-3">
+									<button class="btn btn-block btn-sm btn-default" onclick="download( page.source )">
+										<i class="fa fa-file-o"></i>&nbsp;&nbsp;
+										View Source
+									</button>
+								</div>
+							</div>
 						</div>
 					</div>
 					<div class="modal-footer">
@@ -309,8 +1149,60 @@
 					</div>
 				</div><!-- /.modal-content -->
 			</div><!-- /.modal-dialog -->
-		</div><!-- /.modal -->
-
+		</div>
+		<div class="modal fade" id="tut6-screenshot" tabindex="-1" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">×</span>
+						</button>
+						<h4 class="modal-title">Screenshot of Assignment 2</h4>
+					</div>
+					<div class="modal-body">
+						<div>
+							<div class="row">
+								<div class="col-sm-8">
+									Desktop View
+								</div>
+								<div class="col-sm-4">
+									<button class="btn btn-block btn-sm btn-primary" onclick="download( item.link )">
+										<i class="fa fa-download"></i>&nbsp;&nbsp;
+										Download
+									</button>
+								</div>
+							</div>
+							<div class="divider-demo"></div><div class="row">
+								<div class="col-sm-8">
+									Tablet View
+								</div>
+								<div class="col-sm-4">
+									<button class="btn btn-block btn-sm btn-primary" onclick="download( item.link )">
+										<i class="fa fa-download"></i>&nbsp;&nbsp;
+										Download
+									</button>
+								</div>
+							</div>
+							<div class="divider-demo"></div><div class="row">
+								<div class="col-sm-8">
+									Phone View
+								</div>
+								<div class="col-sm-4">
+									<button class="btn btn-block btn-sm btn-primary" onclick="download( item.link )">
+										<i class="fa fa-download"></i>&nbsp;&nbsp;
+										Download
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div>
+		<script src="js/jquery.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/custom.js"></script>
 	</body>

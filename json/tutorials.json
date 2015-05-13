@@ -3,7 +3,7 @@
 		"week" : 6,
 		"date" : "12 February 2015",
 		"theme" : "UI Design",
-		"display" : false,
+		"display" : true,
 		"target" : "Students can start implementing the UI of Assignment 2",
 		"topics" : [
 			{
@@ -51,7 +51,7 @@
 		"week" : 7,
 		"date" : "26 February 2015",
 		"theme" : "Assignment 2 Overview (Client Side) & Front-end Development",
-		"display" : false,
+		"display" : true,
 		"target" : "Students can start implementing the player and control logic of Assignment 2 (locally)",
 		"topics" : [
 			{
@@ -97,7 +97,7 @@
 		"date" : "5 March 2015",
 		"theme" : "Assignment 2 Overview (Server Side) & Back-end Development",
 		"target" : "Students can start implementing the back-end of Assignment 2",
-		"display" : false,
+		"display" : true,
 		"topics" : [
 			{
 				"title" : "Assignment 2 Overview (Server Side)",
@@ -134,7 +134,7 @@
 		"week" : 9,
 		"date" : "12 March 2015",
 		"theme" : "Back-end Development (Continued)",
-		"display" : false,
+		"display" : true,
 		"target" : "Students should complete Assignment 2 after this tutorial",
 		"topics" : [
 			{
@@ -180,7 +180,7 @@
 		"week" : 10,
 		"date" : "19 March 2015",
 		"theme" : "More about Assignment 2",
-		"display" : false,
+		"display" : true,
 		"target" : "Deadline of Assignment 2: 23:59, 2015 March 29 (Sun)",
 		"topics" : [
 			{
@@ -227,7 +227,6 @@
 		"date" : "16 April 2015",
 		"theme" : "Bonus materials",
 		"display" : true,
-		"current" : true,
 		"target" : "The matrials are optional and may be useful for your projects :-)",
 		"topics" : [
 			{

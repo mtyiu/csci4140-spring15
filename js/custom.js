@@ -13,3 +13,8 @@ $( function() {
 		$( '.collapse-outline' ).collapse( 'toggle' );
 	} );
 } );
+
+var download = function( url ) {
+	window.open( url, '_blank' );
+	ga( 'send', 'event', 'download', url );
+};
