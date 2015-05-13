@@ -14,6 +14,6 @@ $( function() {
 	} )
 } )
 
-var download = function( url ) {
+function download( url ) {
 	ga( 'send', 'event', 'download', url )
 }
