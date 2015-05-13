@@ -12,4 +12,12 @@ $( function() {
 	$( '#show-all-outline' ).click( function() {
 		$( '.collapse-outline' ).collapse( 'toggle' )
 	} )
+
+	$( 'a' ).click( function( e ) {
+		if ( $( this ).data( 'track' ) ) {
+			ga( 'send', 'event', 'download', $( this ).attr( 'href' ) )
+		}
+	} )
+
+	// ;
 } )
